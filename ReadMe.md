@@ -10,4 +10,4 @@ How we are going to make it:
 
 Group orientation: email, phone, Visual studio code Live
 
-Meeting Times: Monday, August 10th, Friday, August, 14th, Monday, August 17th: 6:30 - 7:30
+Meeting Times: Monday, August 10th, Friday, August, 14th, Monday, August 17th: 6:30 - 7:30.
