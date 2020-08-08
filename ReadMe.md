@@ -17,8 +17,6 @@ Meeting Times:
     Monday, August 17th: 6:30 - 7:30pm
 
 
-
-
 Front end:
     Matthew + Aaron
         -Create a skeleton HTML page
