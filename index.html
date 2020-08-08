@@ -9,7 +9,8 @@
     <!-- load MUI -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="//cdn.muicss.com/mui-0.10.3/extra/mui-colors.min.css">
+    <link rel="stylesheet" href="//cdn.muicss.com/mui-latest/extra/mui-colors.min.css">
+    <script src="//cdn.muicss.com/mui-latest/extra/mui-combined.min.js"></script>
 
     <title>Local Coffee Shop Locator</title>
     
@@ -23,6 +24,7 @@
         <!-- Content HTML goes here -->
       </div>
 
+      <!-- AppBar -->
       <div class="mui-container-fluid">
         <table>
           <tr class="mui--appbar-height">
@@ -31,13 +33,14 @@
               <ul class="mui-list--inline mui--text-body2">
                 <li><a href="#">About</a></li>
                 <li><a href="#">Pricing</a></li>
-                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Login</a></li>
+                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Home</a></li>
               </ul>
             </td>
           </tr>
         </table>
       </div>
 
+      <!-- Main Content -->
       <div class="mui--appbar-height"></div>
       <br>
       <br>
@@ -55,31 +58,28 @@
         <form class="mui-form">
             <legend>Location</legend>
             <div class="mui-textfield">
-              <input type="text" placeholder="Input 1">
+              <input type="text" id="locationInput" placeholder="Input 1">
             </div>
-            <button type="submit" class="mui-btn mui-btn--raised submitBtn">Submit</button>
+            <button type="submit" class="mui-btn mui-btn--raised submitBtn">Search For Coffee Shops</button>
           </form>
-        <button class="mui-btn">Search For Coffee Shops</button>
 
         <!-- Map Display with options -->
         <div></div>
-
 
         <!-- List of options with details -->
         <div></div>
 
     </div>
-
-    
-    
+ 
     <footer>
         <div class="mui-container mui--text-center">
           Made with ♥ by <a href="https://www.muicss.com">MUICSS</a>
         </div>
       </footer>
 </body>
+<script src="./Assets/app.js"></script>
 <script src="//cdn.muicss.com/mui-0.10.3/extra/mui-combined.min.js"></script>
 <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
-<script>new WOW().init();</script>
+<!-- <script>new WOW().init();</script> -->
 </html>
 
