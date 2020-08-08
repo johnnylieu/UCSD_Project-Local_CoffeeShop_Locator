@@ -1,67 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Local Coffee Shops</title>
     <link rel="stylesheet" href="./Assets/style.css">
-    <!-- load MUI -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="//cdn.muicss.com/mui-latest/extra/mui-colors.min.css">
-    <script src="//cdn.muicss.com/mui-latest/extra/mui-combined.min.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 
     <title>Local Coffee Shop Locator</title>
     
 </head>
 <body>
-    <header class="mui-appbar mui--z1">
-        <!-- Appbar HTML goes here -->
-      </header>
-
-      <div id="content-wrapper" class="mui--text-center">
-        <!-- Content HTML goes here -->
-      </div>
-
-      <!-- AppBar -->
-      <div class="mui-container-fluid">
-        <table>
-          <tr class="mui--appbar-height">
-            <td class="mui--text-title">Brand.io</td>
-            <td class="mui--text-right">
-              <ul class="mui-list--inline mui--text-body2">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Home</a></li>
-              </ul>
-            </td>
-          </tr>
-        </table>
-      </div>
-
-      <!-- Main Content -->
-      <div class="mui--appbar-height"></div>
-      <br>
-      <br>
-      <div class="mui--text-display3 row wow zoomInDown">Brand.io</div>
-      <br>
-      <br>
-      <button class="mui-btn mui-btn--raised">Get started</button>
-      <br>
-      <br>
-      <i class="fa fa-university fa-5x mui--text-display3 mui--color-pink-A100 row wow zoomIn" aria-hidden="true"></i>
-      
-      
-    <div class="mui-container">
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">Logo</a>
+        </div>
+      </nav>
+    <div class="container">
         <!-- City Search Bar -->
-        <form class="mui-form">
-            <legend>Location</legend>
-            <div class="mui-textfield">
-              <input type="text" id="locationInput" placeholder="Input 1">
-            </div>
-            <button type="submit" class="mui-btn mui-btn--raised submitBtn">Search For Coffee Shops</button>
-          </form>
+        <h2>Location Input:</h2>
+        <div class="input-field col s6">
+            <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+        </div>
+        <a class="waves-effect waves-light btn searchBtn">Search</a>
 
         <!-- Map Display with options -->
         <div></div>
@@ -71,15 +44,10 @@
 
     </div>
  
-    <footer>
-        <div class="mui-container mui--text-center">
-          Made with ♥ by <a href="https://www.muicss.com">MUICSS</a>
-        </div>
-      </footer>
 </body>
 <script src="./Assets/app.js"></script>
-<script src="//cdn.muicss.com/mui-0.10.3/extra/mui-combined.min.js"></script>
-<script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
-<!-- <script>new WOW().init();</script> -->
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
 </html>
 
