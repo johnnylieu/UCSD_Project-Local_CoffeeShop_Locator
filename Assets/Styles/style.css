@@ -5,6 +5,32 @@
  *
  * Made By MaterializeCSS.com
  */
+ /* 584D3D dark lava */
+ /* 9F956C artichoke */
+ /* CBBF7A Misty Moss */
+ /* F4E87C Yellow Crayola */
+ /* EBF38B Key Lime */
+
+/* To create Sticky Footer */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #CBBF7A;
+}
+
+nav {
+  display: flex;
+  
+}
+
+.nav-wrapper {
+  background-color: #584D3D;
+}
+
+main {
+  flex: 1 0 auto;
+}
 
  .icon-block {
     padding: 0 15px;
@@ -13,23 +39,39 @@
       font-size: inherit;
   }
 
-  .searchBtn {
+  #searchBtn {
+    height: 100%;
+    margin: 0px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  #centerTitle {
+    margin: 0;
+    
+  }
+
+  #locationTitle {
+    
     height: 100%;
     margin: 0px;
     padding: 15px;
   }
 
-  #centerTitle {
-    margin-top: 0px;
-  }
-
-  #locationTitle {
-    background-color: cadetblue;
+  #locationInput {
     height: 100%;
     margin: 0px;
     padding: 15px;
   }
 
   #locationRow {
-    background-color: cornflowerblue;
+    height: 150px;
+    margin: auto;
+    background-color: black;
   }
+
+@media only screen and (min-width: 320px) {
+  body {
+      width: 100%;
+  }
+}
