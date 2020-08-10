@@ -17,6 +17,10 @@
    width: 333px;
  }
 
+ #city-name {
+   font: white;
+ }
+
 /* To create Sticky Footer */
 body {
   display: flex;
