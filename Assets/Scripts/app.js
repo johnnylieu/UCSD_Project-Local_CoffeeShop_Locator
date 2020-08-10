@@ -1,5 +1,4 @@
-// Johnny's part
-
+// beginning of Johnny's part
 // displays current date
 $(document).ready(function () {
     $("#currentDate").append("<p>" + (moment().format('dddd, MMMM Do')) + "<p>");
@@ -13,7 +12,7 @@ $(document).ready(function () {
         var button = $(this);
         console.log("click");
 
-        var city = $("#city-name").val();
+        var city = $("#city-name").val().trim();
         console.log(city);
 
         // reverse lookup using open weather lol
@@ -39,7 +38,6 @@ $(document).ready(function () {
             $("#currentIcon").prepend(currentIcon);
             $("#temp0").prepend("<p>Temp: " + rTemp0 + "° F </p.>");
             $("#currentCity0").append("<p>" + geoCity + ", " + country + "</p>");
-
 
         });
     });
@@ -69,4 +67,25 @@ function initMap() {
             map: map
         })
     });
-}
+} 
+
+function initMapTwo() {
+        // The location of user
+        var userLoc = {
+            lat: geoLat,
+            lng: geoLon
+        };
+        // The map, centered at location
+        var map = new google.maps.Map(
+            document.getElementById('map'), {
+                zoom: 4,
+                center: userLoc
+            });
+        // The marker, positioned at location
+        var marker = new google.maps.Marker({
+            position: userLoc,
+            map: map
+        })
+    };
+
+// end of Johnny's part
