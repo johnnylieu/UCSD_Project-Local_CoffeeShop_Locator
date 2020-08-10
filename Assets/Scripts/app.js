@@ -69,23 +69,4 @@ function initMap() {
     });
 } 
 
-function initMapTwo() {
-        // The location of user
-        var userLoc = {
-            lat: geoLat,
-            lng: geoLon
-        };
-        // The map, centered at location
-        var map = new google.maps.Map(
-            document.getElementById('map'), {
-                zoom: 4,
-                center: userLoc
-            });
-        // The marker, positioned at location
-        var marker = new google.maps.Marker({
-            position: userLoc,
-            map: map
-        })
-    };
-
 // end of Johnny's part
