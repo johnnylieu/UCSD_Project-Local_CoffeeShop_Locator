@@ -5,10 +5,10 @@ $(document).ready(function () {
     $("#currentDate").append("<p>" + (moment().format('dddd, MMMM Do')) + "<p>");
 });
 
-// grabbing user's location
-var geoLocBtn = $("#geoSearchBtn");
+// grabbing user's inputted location
+var searchBtn = $("#searchBtn")
 
-geoLocBtn.on("click", function (event) {
+searchBtn.on("click", function (event) {
     event.preventDefault();
     console.log("click");
 
@@ -53,32 +53,28 @@ geoLocBtn.on("click", function (event) {
 });
 
 // google maps
-// function initMap () {
-//     var location = {lat: geoLat, lng: geoLon};
-//     var map = new google.maps.Map($("#map"), {
-//         zoom: 4,
-//         center: location,
-//     });
-// }
 function initMap() {
-        navigator.geolocation.getCurrentPosition(function (position) {
-                console.log(position);
+    navigator.geolocation.getCurrentPosition(function (position) {
+        console.log(position);
 
-                const geoLat = position.coords.latitude;
-                const geoLon = position.coords.longitude;
-                console.log(geoLat, geoLon);
-                // The location of user
-                var uluru = {lat: geoLat, lng: geoLon};
-                // The map, centered at location
-                var map = new google.maps.Map(
-                    document.getElementById('map'), {
-                        zoom: 4,
-                        center: uluru
-                    });
-                // The marker, positioned at location
-                var marker = new google.maps.Marker({
-                    position: uluru,
-                    map: map
-                })
-                });
-            }
+        const geoLat = position.coords.latitude;
+        const geoLon = position.coords.longitude;
+        console.log(geoLat, geoLon);
+        // The location of user
+        var userLoc = {
+            lat: geoLat,
+            lng: geoLon
+        };
+        // The map, centered at location
+        var map = new google.maps.Map(
+            document.getElementById('map'), {
+                zoom: 4,
+                center: userLoc
+            });
+        // The marker, positioned at location
+        var marker = new google.maps.Marker({
+            position: userLoc,
+            map: map
+        })
+    });
+}
