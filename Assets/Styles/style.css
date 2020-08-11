@@ -13,75 +13,75 @@
 
  /* Google map */
  #map {
-   height: 300px;
-   width: 333px;
- }
+  height: 300px;
+  width: 333px;
+}
 
- #city-name {
-   font: white;
- }
+#city-name {
+  font: white;
+}
 
 /* To create Sticky Footer */
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background-color: #CBBF7A;
+ display: flex;
+ min-height: 100vh;
+ flex-direction: column;
+ background-color: #CBBF7A;
 }
 
 nav {
-  display: flex;
-  
+ display: flex;
+ 
 }
 
 .nav-wrapper {
-  background-color: #584D3D;
+ background-color: #584D3D;
 }
 
 main {
-  flex: 1 0 auto;
+ flex: 1 0 auto;
 }
 
- .icon-block {
-    padding: 0 15px;
-  }
-  .icon-block .material-icons {
-      font-size: inherit;
-  }
+.icon-block {
+   padding: 0 15px;
+ }
+ .icon-block .material-icons {
+     font-size: inherit;
+ }
 
-  #searchBtn {
-    height: 100%;
-    margin: 0px;
-    padding: 15px;
-    text-align: center;
-  }
+ #searchBtn {
+   height: 100%;
+   margin: 0px;
+   padding: 15px;
+   text-align: center;
+ }
 
-  #centerTitle {
-    margin: 0;
-    
-  }
+ #centerTitle {
+   margin: 0;
+   
+ }
 
-  #locationTitle {
-    
-    height: 100%;
-    margin: 0px;
-    padding: 15px;
-  }
+ #locationTitle {
+   
+   height: 100%;
+   margin: 0px;
+   padding: 15px;
+ }
 
-  #locationInput {
-    height: 100%;
-    margin: 0px;
-    padding: 15px;
-  }
+ #locationInput {
+   height: 100%;
+   margin: 0px;
+   padding: 15px;
+ }
 
-  #locationRow {
-    height: 150px;
-    margin: auto;
-    background-color: black;
-  }
+ #locationRow {
+   height: 150px;
+   margin: auto;
+   background-color: black;
+ }
 
 @media only screen and (min-width: 320px) {
-  body {
-      width: 100%;
-  }
+ body {
+     width: 100%;
+ }
 }
