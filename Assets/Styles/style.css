@@ -58,6 +58,10 @@ main {
     text-align: center;
   }
 
+  input::placeholder {
+    color:white;
+  }
+
   #centerTitle {
     margin: 0;
     
@@ -79,5 +83,10 @@ main {
   #locationRow {
     height: 150px;
     margin: auto;
-    background-color: black;
+  }
+
+
+
+  .page-footer {
+    back
   }
