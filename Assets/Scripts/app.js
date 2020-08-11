@@ -3,14 +3,17 @@
 $(document).ready(function () {
     $("#currentDate").append("<p>" + (moment().format('dddd, MMMM Do')) + "<p>");
 
+    // gets user's location
     navigator.geolocation.getCurrentPosition(function (position) {
         console.log(position);
         geoLat = position.coords.latitude;
         geoLon = position.coords.longitude;
         console.log(geoLat, geoLon);
 
+        // loads user's location in google map
         initMap();
 
+        // grabs weather for user's location
         queryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + geoLat + "&lon=" + geoLon + "&appid=8f775258afdec054195f89c38855f678&units=imperial";
     $.ajax({
         url: queryURL,
