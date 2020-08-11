@@ -11,20 +11,41 @@
  /* F4E87C Yellow Crayola */
  /* EBF38B Key Lime */
 
+
  
  #city-name {
    font: white;
  }
  
+
+ /* Google map */
+ #map {
+  height: 300px;
+  width: 333px;
+}
+
+#city-name {
+  font: white;
+}
+
+
 /* To create Sticky Footer */
 body {
+
+ display: flex;
+ min-height: 100vh;
+ flex-direction: column;
+ background-color: #CBBF7A;
+
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   background-color: #CBBF7A;
   min-width: 28em; 
   /* locks website width but not viewing width */
+
 }
+
 
 /* Nav */
 #nav {
@@ -35,13 +56,23 @@ body {
   background-color: #584D3D;
   text-align: center;
   /* Fix Navbar */
+=======
+nav {
+ display: flex;
+ 
+}
+
+.nav-wrapper {
+ background-color: #584D3D;
+
 }
 
 main {
-  flex: 1 0 auto;
+ flex: 1 0 auto;
 }
 
 .icon-block {
+
     padding: 0 15px;
   }
   .icon-block .material-icons {
@@ -60,12 +91,42 @@ main {
   }
   
 
-  #locationTitle {
-    
-    height: 100%;
-    margin: 0px;
-    padding: 15px;
+   padding: 0 15px;
+ }
+ .icon-block .material-icons {
+     font-size: inherit;
+ }
+
+ #searchBtn {
+   height: 100%;
+   margin: 0px;
+   padding: 15px;
+   text-align: center;
+ }
+
+
+ #centerTitle {
+   margin: 0;
+   
+ }
+
+  input::placeholder {
+    color:white;
   }
+
+  #centerTitle {
+    margin: 0;
+    
+  }
+
+
+ #locationTitle {
+   
+   height: 100%;
+   margin: 0px;
+   padding: 15px;
+ }
+
 
   #locationInput {
     height: 100%;
@@ -73,6 +134,25 @@ main {
     padding: 15px;
   }
   
+
+ #locationInput {
+   height: 100%;
+   margin: 0px;
+   padding: 15px;
+ }
+
+ #locationRow {
+   height: 150px;
+   margin: auto;
+   background-color: black;
+ }
+
+@media only screen and (min-width: 320px) {
+ body {
+     width: 100%;
+ }
+}
+
   #locationRow {
     height: 150px;
     margin: auto;
@@ -97,7 +177,13 @@ main {
 
   
 
+
   /* footer */
   #footer {
     background-color: #584D3D;
   }
+
+  .page-footer {
+    back
+  }
+
