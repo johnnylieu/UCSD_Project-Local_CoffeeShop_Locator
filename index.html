@@ -28,24 +28,18 @@
 <body>
     <main>
         <nav>
-            <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo center-align" id="centerTitle">Local Coffee Shop Locator</a>
-                <!-- <h1 class="center-align" id="centerTitle">Local Coffee Shop Locator</h1> -->
-            </div>
-
-            <!-- date and weather, this counts as one server side api, the moment js date might count as one server side api-->
-            <!--Aaron & Matt, please style this-->
-            <div class="dayInfo-wrapper">
-            <p id="currentDate"></p><p id="currentCity0"></p><p id="currentIcon"></p><p id="temp0"></p>
+            <div class="nav-wrapper" id="nav">
+                <a href="index.html" class="brand-logo">Local Coffee Shop Locator</a>
             </div>
 
         </nav>
         <div class="container">
+
             <!-- City Search Bar -->
             <form class="col s12">
                 <div class="row" id="locationRow">
                     <div class="col s4">
-            
+                        <h2>Location:</h2>
                     </div>
                     <div class="col s6">
                         <div class="input-field">
@@ -58,34 +52,43 @@
                     </div>
                 </div>
             </form>
+
+            <!-- date and weather, this counts as one server side api, the moment js date might count as one server side api-->
+            <!--Aaron & Matt, please style this-->
+            <div class="row dayInfo-wrapper">
+                <div class="col s3"  id="currentDate">Today is:</div>
+                <div class="col s3" id="currentCity0">The current City you're searching for is:</div>
+                <div class="col s3" id="currentIcon"></div>
+                <div class="col s3" id="temp0">The current Temperature is:</div>
+            </div>
             <!-- break line -->
             <hr>          
 
             <!-- Map Display with options -->
             <div class="row">
                 <div class="col s6">
-                <div class="card blue-grey darken-1">
-                    <div class="card-image" id="map">
-                    <img src="images/sample-1.jpg">
+                <div class="card" style="background-color: #9F956C;">
+                    <div class="card-image googleMap" id="map">
+                        <!-- googleMap -->
                     </div>
                     <div class="card-content">
-                    <p>Google Map Should Go Here</p>
+                        <p>Google Map Should Go Here</p>
                     </div>
                     <div class="card-action">
-                    <a href="#">This is a link to the google map</a>
+                        <a href="#">This is a link to the google map</a>
                     </div>
                 </div>
                 </div>
 
                 <!-- List of options with details with no more than 10 -->
                 <div class="col s6">
-                    <div class="card blue-grey darken-1">
-                    <div class="card-content white-text">
-                        <span class="card-title">Reviews</span>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Link to the individual review</a>
-                    </div>
+                    <div class="card" style="background-color: #9F956C;">
+                        <div class="card-content white-text">
+                            <span class="card-title">Reviews</span>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Link to the individual review</a>
+                        </div>
                     </div>
                 </div>
             </div>        
