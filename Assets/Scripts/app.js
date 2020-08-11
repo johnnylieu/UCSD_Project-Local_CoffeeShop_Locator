@@ -68,6 +68,13 @@ searchBtn.on("click", function (event) {
         var rTemp0 = Math.floor(response.main.temp);
         console.log(rTemp0);
 
+        geoLat = response.coord.lat
+        console.log(geoLat);
+        geoLon = response.coord.lon
+        console.log(geoLon);
+
+        initMap()
+
         $("#temp0").empty();
         $("#currentIcon").empty();
         $("#currentCity0").empty();
@@ -75,7 +82,6 @@ searchBtn.on("click", function (event) {
         $("#currentIcon").prepend(currentIcon);
         $("#temp0").prepend("<p>Temp: " + rTemp0 + "° F </p.>");
         $("#currentCity0").append("<p>" + geoCity + ", " + country + "</p>");
-
     });
 });
 
@@ -98,5 +104,4 @@ function initMap() {
         map: map
     })
 };
-
 // end of Johnny's part
