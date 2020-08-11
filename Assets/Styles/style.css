@@ -23,10 +23,19 @@
 
 /* To create Sticky Footer */
 body {
+<<<<<<< HEAD
  display: flex;
  min-height: 100vh;
  flex-direction: column;
  background-color: #CBBF7A;
+=======
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #CBBF7A;
+  min-width: 28em; 
+  /* locks website width but not viewing width */
+>>>>>>> f18b950618dd2c292facaf895d2b180ea29498e8
 }
 
 nav {
@@ -56,10 +65,21 @@ main {
    text-align: center;
  }
 
+<<<<<<< HEAD
  #centerTitle {
    margin: 0;
    
  }
+=======
+  input::placeholder {
+    color:white;
+  }
+
+  #centerTitle {
+    margin: 0;
+    
+  }
+>>>>>>> f18b950618dd2c292facaf895d2b180ea29498e8
 
  #locationTitle {
    
@@ -74,6 +94,7 @@ main {
    padding: 15px;
  }
 
+<<<<<<< HEAD
  #locationRow {
    height: 150px;
    margin: auto;
@@ -85,3 +106,15 @@ main {
      width: 100%;
  }
 }
+=======
+  #locationRow {
+    height: 150px;
+    margin: auto;
+  }
+
+
+
+  .page-footer {
+    back
+  }
+>>>>>>> f18b950618dd2c292facaf895d2b180ea29498e8
