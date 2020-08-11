@@ -11,16 +11,11 @@
  /* F4E87C Yellow Crayola */
  /* EBF38B Key Lime */
 
- /* Google map */
- #map {
-   height: 300px;
-   width: 333px;
- }
-
+ 
  #city-name {
    font: white;
  }
-
+ 
 /* To create Sticky Footer */
 body {
   display: flex;
@@ -31,41 +26,39 @@ body {
   /* locks website width but not viewing width */
 }
 
-nav {
+/* Nav */
+#nav {
   display: flex;
-  
 }
 
 .nav-wrapper {
   background-color: #584D3D;
+  text-align: center;
+  /* Fix Navbar */
 }
 
 main {
   flex: 1 0 auto;
 }
 
- .icon-block {
+.icon-block {
     padding: 0 15px;
   }
   .icon-block .material-icons {
-      font-size: inherit;
+    font-size: inherit;
   }
-
+  
   #searchBtn {
     height: 100%;
     margin: 0px;
     padding: 15px;
     text-align: center;
   }
-
+  
   input::placeholder {
     color:white;
   }
-
-  #centerTitle {
-    margin: 0;
-    
-  }
+  
 
   #locationTitle {
     
@@ -79,14 +72,32 @@ main {
     margin: 0px;
     padding: 15px;
   }
-
+  
   #locationRow {
     height: 150px;
     margin: auto;
   }
+  /* cards */
+  .card {
+    background-color: #9F956C;
+  }
 
+  .googleMap {
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    max-height: 100%;
+    /* Fix display */
+  }
+  
+  /* Google map */
+  
+  
+  
 
+  
 
-  .page-footer {
-    back
+  /* footer */
+  #footer {
+    background-color: #584D3D;
   }
