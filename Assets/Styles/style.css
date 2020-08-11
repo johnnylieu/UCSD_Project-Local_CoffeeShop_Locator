@@ -11,6 +11,16 @@
  /* F4E87C Yellow Crayola */
  /* EBF38B Key Lime */
 
+ /* Google map */
+ #map {
+   height: 300px;
+   width: 333px;
+ }
+
+ #city-name {
+   font: white;
+ }
+
 /* To create Sticky Footer */
 body {
   display: flex;
