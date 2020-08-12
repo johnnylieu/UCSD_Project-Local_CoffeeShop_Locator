@@ -10,180 +10,98 @@
  /* CBBF7A Misty Moss */
  /* F4E87C Yellow Crayola */
  /* EBF38B Key Lime */
-
-
  
- #city-name {
-   font: white;
- }
- 
-
- /* Google map */
- #map {
-  height: 300px;
-  width: 333px;
+#city-name {
+  font: white;
 }
 
 #city-name {
   font: white;
 }
 
-
 /* To create Sticky Footer */
 body {
-
- display: flex;
- min-height: 100vh;
- flex-direction: column;
- background-color: #CBBF7A;
-
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background-color: #CBBF7A;
-  min-width: 28em; 
-  /* locks website width but not viewing width */
-
-}
-
-
-/* Nav */
-#nav {
-  display: flex;
-}
-
-.nav-wrapper {
-  background-color: #584D3D;
-  text-align: center;
-  /* Fix Navbar */
-=======
-nav {
- display: flex;
- 
-}
-
-.nav-wrapper {
- background-color: #584D3D;
-
-}
+/* locks website width but not viewing width */
+display: flex;
+min-height: 100vh;
+flex-direction: column;
+background-color: #CBBF7A;
+min-width: 28em;
+} 
 
 main {
- flex: 1 0 auto;
+  flex: 1 0 auto;
+} 
+
+/* Header Styling */
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #584D3D;
 }
 
 .icon-block {
-
-    padding: 0 15px;
-  }
-  .icon-block .material-icons {
-    font-size: inherit;
-  }
-  
-  #searchBtn {
-    height: 100%;
-    margin: 0px;
-    padding: 15px;
-    text-align: center;
-  }
-  
-  input::placeholder {
-    color:white;
-  }
-  
-
-   padding: 0 15px;
- }
- .icon-block .material-icons {
-     font-size: inherit;
- }
-
- #searchBtn {
-   height: 100%;
-   margin: 0px;
-   padding: 15px;
-   text-align: center;
- }
-
-
- #centerTitle {
-   margin: 0;
-   
- }
-
-  input::placeholder {
-    color:white;
-  }
-
-  #centerTitle {
-    margin: 0;
-    
-  }
-
-
- #locationTitle {
-   
-   height: 100%;
-   margin: 0px;
-   padding: 15px;
- }
-
-
-  #locationInput {
-    height: 100%;
-    margin: 0px;
-    padding: 15px;
-  }
-  
-
- #locationInput {
-   height: 100%;
-   margin: 0px;
-   padding: 15px;
- }
-
- #locationRow {
-   height: 150px;
-   margin: auto;
-   background-color: black;
- }
-
-@media only screen and (min-width: 320px) {
- body {
-     width: 100%;
- }
+  padding: 0 15px;
 }
 
-  #locationRow {
-    height: 150px;
-    margin: auto;
-  }
-  /* cards */
-  .card {
+.icon-block .material-icons {
+  font-size: inherit;
+}
+  
+/* Button Styling */
+#searchBtn {
+  height: 100%;
+  text-align: center;
+}
+
+/* Form Styling */
+#location-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  margin: auto;
+}
+
+/* Input Styling */
+input::placeholder {
+  color:white;
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+ input::placeholder {
+  color:white;
+}
+
+/* Daily Info Styling */
+#current-date {
+  color: white;
+}
+
+#current-city {
+  color: white;
+}
+
+#temp {
+  color: white;
+}
+
+/* Card Styling */
+.card {
     background-color: #9F956C;
-  }
+}
 
-  .googleMap {
-    width: 300px;
-    height: 300px;
-    max-width: 100%;
-    max-height: 100%;
-    /* Fix display */
-  }
+/* Google map styling*/
+#map {
+height: 400px;
+width: 100%;
+}
   
-  /* Google map */
-  
-  
-  
-
-  
-
-
-  /* footer */
-  #footer {
-    background-color: #584D3D;
-  }
-
-  .page-footer {
-    back
-  }
-
+/* Footer styling*/
+#footer {
+  background-color: #584D3D;
+}

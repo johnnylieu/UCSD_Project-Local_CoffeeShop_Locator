@@ -31,16 +31,12 @@
             <div class="nav-wrapper" id="nav">
                 <a href="index.html" class="brand-logo">Local Coffee Shop Locator</a>
             </div>
-
         </nav>
         <div class="container">
 
             <!-- City Search Bar -->
             <form class="col s12">
-                <div class="row" id="locationRow">
-                    <div class="col s4">
-                        <h2>Location:</h2>
-                    </div>
+                <div class="row" id="location-row">
                     <div class="col s6">
                         <div class="input-field">
                         <input type="text" class="form-control validate" id="city-name" type="search" aria-label="Search" placeholder="Type your city here i.e. San Diego">
@@ -56,10 +52,10 @@
             <!-- date and weather, this counts as one server side api, the moment js date might count as one server side api-->
             <!--Aaron & Matt, please style this-->
             <div class="row dayInfo-wrapper">
-                <div class="col s3"  id="currentDate">Today is:</div>
-                <div class="col s3" id="currentCity0">The current City you're searching for is:</div>
-                <div class="col s3" id="currentIcon"></div>
-                <div class="col s3" id="temp0">The current Temperature is:</div>
+                <div class="col s3"  id="current-date"></div>
+                <div class="col s3" id="current-city"></div>
+                <div class="col s3" id="current-icon"></div>
+                <div class="col s3" id="temp"></div>
             </div>
             <!-- break line -->
             <hr>          
@@ -68,14 +64,14 @@
             <div class="row">
                 <div class="col s6">
                 <div class="card" style="background-color: #9F956C;">
-                    <div class="card-image googleMap" id="map">
+                    <div class="card-image google-map-container">
                         <!-- googleMap -->
                     </div>
-                    <div class="card-content">
+                    <div class="card-content" id="map">
                         <p>Google Map Should Go Here</p>
                     </div>
                     <div class="card-action">
-                        <a href="#">This is a link to the google map</a>
+                        <a href="#">Click here to get directions</a>
                     </div>
                 </div>
                 </div>

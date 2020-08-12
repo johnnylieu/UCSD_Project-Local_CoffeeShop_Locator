@@ -1,7 +1,7 @@
 // beginning of Johnny's part
 // displays current date
 $(document).ready(function () {
-    $("#currentDate").append("<p>" + (moment().format('dddd, MMMM Do')) + "<p>");
+    $("#current-date").append("<p><strong>Today's Date:</strong></p>" + (moment().format('dddd, MMMM Do')));
 
     // gets user's location
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -29,13 +29,13 @@ $(document).ready(function () {
         var rTemp0 = Math.floor(response.main.temp);
         console.log(rTemp0);
 
-        $("#temp0").empty();
-        $("#currentIcon").empty();
-        $("#currentCity0").empty();
+        $("#temp").empty();
+        $("#current-icon").empty();
+        $("#current-city").empty();
 
-        $("#currentIcon").prepend(currentIcon);
-        $("#temp0").prepend("<p>Temp: " + rTemp0 + "° F </p.>");
-        $("#currentCity0").append("<p>" + geoCity + ", " + country + "</p>");
+        $("#current-icon").prepend(currentIcon);
+        $("#temp").append("<p><strong>Current Temp:</strong></p> " + rTemp0 + "° F");
+        $("#current-city").append("<p><strong>Current City:</strong></p>" + geoCity + ", " + country);
     });
     })
 
@@ -75,13 +75,13 @@ searchBtn.on("click", function (event) {
 
         initMap()
 
-        $("#temp0").empty();
-        $("#currentIcon").empty();
-        $("#currentCity0").empty();
+        $("#temp").empty();
+        $("#current-icon").empty();
+        $("#current-city").empty();
 
-        $("#currentIcon").prepend(currentIcon);
-        $("#temp0").prepend("<p>Temp: " + rTemp0 + "° F </p.>");
-        $("#currentCity0").append("<p>" + geoCity + ", " + country + "</p>");
+        $("#current-city").prepend(currentIcon);
+        $("#temp").prepend("<p>Temperature: " + rTemp0 + "° F </p>");
+        $("#current-city").append("<p>" + geoCity + ", " + country + "</p>");
     });
 });
 
