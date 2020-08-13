@@ -103,10 +103,11 @@ function initialize() {
             center: userLoc
         });
 
-    // The marker, positioned at location
+    // The marker, positioned at user's location
     var marker = new google.maps.Marker({
         position: userLoc,
-        map: map
+        map: map,
+        icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
     })
 
     // info on marker
@@ -143,7 +144,7 @@ function createMarker(place) {
         position: place.geometry.location
     });
 
-    google.maps.event.addListener(marker, 'click', function() {
+    google.maps.event.addListener(marker, 'click', function () {
         infowindow.setContent(place.name);
         infowindow.open(map, this);
     })
