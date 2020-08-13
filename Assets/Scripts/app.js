@@ -73,7 +73,7 @@ searchBtn.on("click", function (event) {
         geoLon = response.coord.lon
         console.log(geoLon);
 
-        initMap()
+        initialize()
 
         $("#temp").empty();
         $("#current-icon").empty();
