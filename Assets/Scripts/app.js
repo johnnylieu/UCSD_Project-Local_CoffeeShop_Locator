@@ -86,141 +86,7 @@ searchBtn.on("click", function (event) {
 });
 
 // google maps
-
-// function initMap() {
-//     // The location of user
-//     var userLoc = {
-//         lat: geoLat,
-//         lng: geoLon
-//     };
-//     // The map, centered at location
-//     var map = new google.maps.Map(
-//         document.getElementById('map'), {
-//             zoom: 12,
-//             center: userLoc
-//         });
-//     // The marker, positioned at location
-//     var marker = new google.maps.Marker({
-//         position: userLoc,
-//         map: map
-//     })
-// };
-
-// this code below is working but only pulls up one coffee shop no matter where you are in the world
-// var map;
-// var service;
-// var infowindow;
-
-// function initMap() {
-//     var userLoc = new google.maps.LatLng(geoLat, geoLon);
-
-//     infowindow = new google.maps.InfoWindow();
-
-//     map = new google.maps.Map(
-//         document.getElementById('map'), {
-//             center: userLoc,
-//             zoom: 11
-//         });
-
-//     var request = {
-//         query: 'coffee',
-//         fields: ['name', 'geometry'],
-//     };
-
-//     var service = new google.maps.places.PlacesService(map);
-
-//     service.findPlaceFromQuery(request, function (results, status) {
-//         if (status === google.maps.places.PlacesServiceStatus.OK) {
-//             for (var i = 0; i < results.length; i++) {
-//                 createMarker(results[i]);
-//             }
-//             map.setCenter(userLoc);
-
-//             function createMarker(place) {
-//                 console.log(place);
-
-//                 new google.maps.Marker({
-//                     position: place.geometry.location,
-//                     map: map
-//                 });
-
-//                 new google.maps.Marker({
-//                     position: userLoc,
-//                     map: map
-//                 });
-//             }
-//             // function createMarkers(places) {
-//             //     var bounds = new google.maps.LatLngBounds();
-//             //     var placesList = document.getElementById('places');
-//             //     console.log(places);
-
-//             //     for (var i = 0, place; place = places[i]; i++) {
-//             //       var image = {
-//             //         url: place.icon,
-//             //         size: new google.maps.Size(71, 71),
-//             //         origin: new google.maps.Point(0, 0),
-//             //         anchor: new google.maps.Point(17, 34),
-//             //         scaledSize: new google.maps.Size(25, 25)
-//             //       };
-
-//             //       var marker = new google.maps.Marker({
-//             //         map: map,
-//             //         icon: image,
-//             //         title: place.name,
-//             //         position: place.geometry.location
-//             //       });
-
-//                   // var li = document.createElement('li');
-//                   // li.textContent = place.name;
-//                   // placesList.appendChild(li);
-
-//                 //   bounds.extend(place.geometry.location);
-//                 // }
-//                 // map.fitBounds(bounds);
-//             //   }
-
-//         }
-//     });
-// }
-
-// trying something new here
-// function initMap() {
-//     // The location of user
-//     var userLoc = {
-//         lat: geoLat,
-//         lng: geoLon
-//     };
-//     // The map, centered at location
-//     var map = new google.maps.Map(
-//         document.getElementById('map'), {
-//             zoom: 12,
-//             center: userLoc
-//         });
-//     // The marker, positioned at location
-//     var marker = new google.maps.Marker({
-//         position: userLoc,
-//         map: map
-//     });
-
-//     // info on marker
-//     var infoWindow = new google.maps.InfoWindow({
-//         content:'<p> Your Location</p>'
-//     });
-
-//     marker.addListener('click', function(){
-//         infoWindow.open(map, marker);
-//     });
-// };
-
-// // add markers global function
-// function addMarker(coords){
-//     var marker = new google.maps.Marker({
-//         position: coords,
-//         map: map
-//     });
-// }
-
-// following youtube video on nearby searches
+// this works but does not load markers of the coffee shops on the map
 var map;
 var infowindow;
 
@@ -256,6 +122,7 @@ function initialize() {
         radius: 8047,
         types: ['cafe']
     };
+    infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch(request, callback);
 };
@@ -275,6 +142,11 @@ function createMarker(place) {
         map: map,
         position: place.geometry.location
     });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(place.name);
+        infowindow.open(map, this);
+    })
 }
 
 // if we want google maps to load when windows loads but right now we don't need this
