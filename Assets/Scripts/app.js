@@ -111,18 +111,18 @@ var service;
 var infowindow;
 
 function initMap() {
-    var sydney = new google.maps.LatLng(geoLat, geoLon);
+    var userLoc = new google.maps.LatLng(geoLat, geoLon);
 
     infowindow = new google.maps.InfoWindow();
 
     map = new google.maps.Map(
         document.getElementById('map'), {
-            center: sydney,
+            center: userLoc,
             zoom: 11
         });
 
     var request = {
-        query: 'coffee shop',
+        query: 'coffee',
         fields: ['name', 'geometry'],
     };
 
@@ -133,7 +133,7 @@ function initMap() {
             for (var i = 0; i < results.length; i++) {
                 createMarker(results[i]);
             }
-            map.setCenter(sydney);
+            map.setCenter(userLoc);
 
             function createMarker(place) {
                 console.log(place);
@@ -144,7 +144,7 @@ function initMap() {
                 });
 
                 new google.maps.Marker({
-                    position: sydney,
+                    position: userLoc,
                     map: map
                 });
             }
