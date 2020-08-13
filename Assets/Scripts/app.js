@@ -11,7 +11,7 @@ $(document).ready(function () {
         console.log(geoLat, geoLon);
 
         // loads user's location in google map
-        initMap();
+        initialize();
 
         // grabs weather for user's location
         queryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + geoLat + "&lon=" + geoLon + "&appid=8f775258afdec054195f89c38855f678&units=imperial";
@@ -106,80 +106,178 @@ searchBtn.on("click", function (event) {
 //     })
 // };
 
+// this code below is working but only pulls up one coffee shop no matter where you are in the world
+// var map;
+// var service;
+// var infowindow;
+
+// function initMap() {
+//     var userLoc = new google.maps.LatLng(geoLat, geoLon);
+
+//     infowindow = new google.maps.InfoWindow();
+
+//     map = new google.maps.Map(
+//         document.getElementById('map'), {
+//             center: userLoc,
+//             zoom: 11
+//         });
+
+//     var request = {
+//         query: 'coffee',
+//         fields: ['name', 'geometry'],
+//     };
+
+//     var service = new google.maps.places.PlacesService(map);
+
+//     service.findPlaceFromQuery(request, function (results, status) {
+//         if (status === google.maps.places.PlacesServiceStatus.OK) {
+//             for (var i = 0; i < results.length; i++) {
+//                 createMarker(results[i]);
+//             }
+//             map.setCenter(userLoc);
+
+//             function createMarker(place) {
+//                 console.log(place);
+
+//                 new google.maps.Marker({
+//                     position: place.geometry.location,
+//                     map: map
+//                 });
+
+//                 new google.maps.Marker({
+//                     position: userLoc,
+//                     map: map
+//                 });
+//             }
+//             // function createMarkers(places) {
+//             //     var bounds = new google.maps.LatLngBounds();
+//             //     var placesList = document.getElementById('places');
+//             //     console.log(places);
+
+//             //     for (var i = 0, place; place = places[i]; i++) {
+//             //       var image = {
+//             //         url: place.icon,
+//             //         size: new google.maps.Size(71, 71),
+//             //         origin: new google.maps.Point(0, 0),
+//             //         anchor: new google.maps.Point(17, 34),
+//             //         scaledSize: new google.maps.Size(25, 25)
+//             //       };
+
+//             //       var marker = new google.maps.Marker({
+//             //         map: map,
+//             //         icon: image,
+//             //         title: place.name,
+//             //         position: place.geometry.location
+//             //       });
+
+//                   // var li = document.createElement('li');
+//                   // li.textContent = place.name;
+//                   // placesList.appendChild(li);
+
+//                 //   bounds.extend(place.geometry.location);
+//                 // }
+//                 // map.fitBounds(bounds);
+//             //   }
+
+//         }
+//     });
+// }
+
+// trying something new here
+// function initMap() {
+//     // The location of user
+//     var userLoc = {
+//         lat: geoLat,
+//         lng: geoLon
+//     };
+//     // The map, centered at location
+//     var map = new google.maps.Map(
+//         document.getElementById('map'), {
+//             zoom: 12,
+//             center: userLoc
+//         });
+//     // The marker, positioned at location
+//     var marker = new google.maps.Marker({
+//         position: userLoc,
+//         map: map
+//     });
+
+//     // info on marker
+//     var infoWindow = new google.maps.InfoWindow({
+//         content:'<p> Your Location</p>'
+//     });
+
+//     marker.addListener('click', function(){
+//         infoWindow.open(map, marker);
+//     });
+// };
+
+// // add markers global function
+// function addMarker(coords){
+//     var marker = new google.maps.Marker({
+//         position: coords,
+//         map: map
+//     });
+// }
+
+// following youtube video on nearby searches
 var map;
-var service;
 var infowindow;
 
-function initMap() {
-    var userLoc = new google.maps.LatLng(geoLat, geoLon);
-
-    infowindow = new google.maps.InfoWindow();
-
-    map = new google.maps.Map(
+function initialize() {
+    // The location of user
+    var userLoc = {
+        lat: geoLat,
+        lng: geoLon
+    };
+    // The map, centered at location
+    var map = new google.maps.Map(
         document.getElementById('map'), {
-            center: userLoc,
-            zoom: 11
+            zoom: 12,
+            center: userLoc
         });
 
+    // The marker, positioned at location
+    var marker = new google.maps.Marker({
+        position: userLoc,
+        map: map
+    })
+
+    // info on marker
+    var infoWindow = new google.maps.InfoWindow({
+        content: '<p> Your Location</p>'
+    });
+
+    marker.addListener('click', function () {
+        infoWindow.open(map, marker);
+    });
     var request = {
-        query: 'coffee',
-        fields: ['name', 'geometry'],
+        location: userLoc,
+        radius: 8047,
+        types: ['cafe']
     };
-
     var service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(request, callback);
+};
 
-    service.findPlaceFromQuery(request, function (results, status) {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-                createMarker(results[i]);
-            }
-            map.setCenter(userLoc);
-
-            function createMarker(place) {
-                console.log(place);
-
-                new google.maps.Marker({
-                    position: place.geometry.location,
-                    map: map
-                });
-
-                new google.maps.Marker({
-                    position: userLoc,
-                    map: map
-                });
-            }
-            function createMarkers(places) {
-                var bounds = new google.maps.LatLngBounds();
-                var placesList = document.getElementById('places');
-                console.log(places);
-              
-                for (var i = 0, place; place = places[i]; i++) {
-                  var image = {
-                    url: place.icon,
-                    size: new google.maps.Size(71, 71),
-                    origin: new google.maps.Point(0, 0),
-                    anchor: new google.maps.Point(17, 34),
-                    scaledSize: new google.maps.Size(25, 25)
-                  };
-              
-                  var marker = new google.maps.Marker({
-                    map: map,
-                    icon: image,
-                    title: place.name,
-                    position: place.geometry.location
-                  });
-              
-                  // var li = document.createElement('li');
-                  // li.textContent = place.name;
-                  // placesList.appendChild(li);
-              
-                //   bounds.extend(place.geometry.location);
-                }
-                // map.fitBounds(bounds);
-              }
-
+function callback(results, status) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+            console.log(results[i]);
         }
+    }
+}
+
+function createMarker(place) {
+    var placeLoc = place.geometry.location;
+    var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location
     });
 }
+
+// if we want google maps to load when windows loads but right now we don't need this
+// google.maps.event.addDomListener(window, 'load', initialize);
 
 // end of Johnny's part
