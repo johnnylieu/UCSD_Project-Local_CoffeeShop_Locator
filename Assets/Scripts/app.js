@@ -112,7 +112,7 @@ function initialize() {
 
     // info on marker
     var infoWindow = new google.maps.InfoWindow({
-        content: '<p> Your Location</p>'
+        content: '<p>You Are Here</p>'
     });
 
     marker.addListener('click', function () {
