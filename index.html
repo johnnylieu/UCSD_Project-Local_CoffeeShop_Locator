@@ -36,24 +36,21 @@
             </div>
         </nav>
         <div class="container">
-
+            
             <!-- City Search Bar -->
             <form class="col s12">
-                <div class="row" id="location-row">
-                    <div class="col s6">
+                <div class="row coffee" title="coffee-shop-locator" id="location-row">
+                    <div class="col s6" id="inputCol">
                         <div class="input-field">
                         <input type="text" class="form-control validate" id="city-name" type="search" aria-label="Search" placeholder="Type your city here i.e. San Diego">
                         <label for="city-name"></label>
-                        </div>
-                    </div>
-                    <div class="col s2">
                         <i class="waves-effect waves-light btn searchBtn" id="searchBtn"><span class="fa fa-search"></span></i>
+                        </div>
                     </div>
                 </div>
             </form>
 
             <!-- date and weather, this counts as one server side api, the moment js date might count as one server side api-->
-            <!--Aaron & Matt, please style this-->
             <div class="row dayInfo-wrapper">
                 <div class="col s3"  id="current-date"></div>
                 <div class="col s3" id="current-city"></div>

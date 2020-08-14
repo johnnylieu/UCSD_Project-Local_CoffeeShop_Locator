@@ -11,12 +11,16 @@
  /* F4E87C Yellow Crayola */
  /* EBF38B Key Lime */
  
+/* Input Tag Styling */
 #city-name {
   font: white;
+  background-color: transparent;
+  width: 80%;
 }
 
-#city-name {
-  font: white;
+#inputCol {
+  margin-top:0px;
+  padding-top:0px;
 }
 
 /* To create Sticky Footer */
@@ -50,8 +54,23 @@ main {
   
 /* Button Styling */
 #searchBtn {
-  height: 100%;
+  position: absolute;
+  height: auto;
+  min-height: 20px;
+  line-height: 20px;
   text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* Background Picture */
+.coffee {
+  height: 100%;
+  width: 100%; 
+  margin-bottom: 5px;
+  background-image: url("../Images/Coffee\ Background.jpg");
+  background-size: cover; 
+  background-position: center;
 }
 
 /* Form Styling */
@@ -59,7 +78,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
+  height: 200px;
   margin: auto;
 }
 
