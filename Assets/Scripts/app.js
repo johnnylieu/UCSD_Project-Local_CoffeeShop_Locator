@@ -85,7 +85,6 @@ searchBtn.on("click", function (event) {
 });
 
 // google maps
-// this works but does not load markers of the coffee shops on the map
 let map;
 var infowindow;
 
