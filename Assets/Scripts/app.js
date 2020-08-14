@@ -140,6 +140,7 @@ function createMarker(place, index) {
     var latti = place.geometry.location.lat();
     var longi = place.geometry.location.lng();
     console.log(latti, longi);
+    console.log(place.name);
     var marker = new google.maps.Marker({
         map: map,
         position: {lat: latti, lng: longi},
