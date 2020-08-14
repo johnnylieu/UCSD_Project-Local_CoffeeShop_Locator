@@ -10,18 +10,6 @@
  /* CBBF7A Misty Moss */
  /* F4E87C Yellow Crayola */
  /* EBF38B Key Lime */
- 
-/* Input Tag Styling */
-#city-name {
-  font: white;
-  background-color: transparent;
-  width: 80%;
-}
-
-#inputCol {
-  margin-top:0px;
-  padding-top:0px;
-}
 
 /* To create Sticky Footer */
 body {
@@ -38,10 +26,11 @@ main {
 } 
 
 /* Header Styling */
-.nav-wrapper {
+.header-wrapper {
   display: flex;
   justify-content: center;
-  background-color: #584D3D;
+  background-color: transparent;
+  color: white;
 }
 
 .icon-block {
@@ -52,20 +41,9 @@ main {
   font-size: inherit;
 }
   
-/* Button Styling */
-#searchBtn {
-  position: absolute;
-  height: auto;
-  min-height: 20px;
-  line-height: 20px;
-  text-align: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
 /* Background Picture */
-.coffee {
-  height: 100%;
+#form-container {
+  height: 350px;
   width: 100%; 
   margin-bottom: 5px;
   background-image: url("../Images/Coffee\ Background.jpg");
@@ -74,15 +52,39 @@ main {
 }
 
 /* Form Styling */
+
+  /* Background Picture */
+#form-container {
+  height: 350px;
+  width: 100%; 
+  margin-bottom: 5px;
+  background-image: url("../Images/Coffee\ Background.jpg");
+  background-size: cover; 
+  background-position: center;
+}
+
 #location-row {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  height: 200px;
+  height: 100%;
+  width: 100%;
   margin: auto;
 }
 
-/* Input Styling */
+  /* Input Styling */
+#city-name {
+  color: white;
+  background-color: transparent;
+  width: 80%;
+}
+
+#inputCol {
+  margin-top:0px;
+  margin-left: 0px;
+  padding-top:0px;
+}
+
 input::placeholder {
   color:white;
   padding: 0 15px;
@@ -96,18 +98,37 @@ input::placeholder {
   color:white;
 }
 
+/* Button Styling */
+#searchBtn {
+  position: absolute;
+  height: 80%;
+  min-height: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 /* Daily Info Styling */
+
 #current-date {
+  margin-left: 3.5rem;
   color: white;
 }
 
 #current-city {
+  margin-left: 3.5rem;
   color: white;
 }
 
 #temp {
+  margin-left: 2.75rem;
   color: white;
 }
+
+/* #current-icon {
+
+} */
 
 /* Card Styling */
 .card {
