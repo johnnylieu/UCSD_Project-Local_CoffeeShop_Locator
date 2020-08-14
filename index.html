@@ -30,33 +30,45 @@
 
 <body>
     <main>
-        <nav>
-            <div class="nav-wrapper" id="nav">
-                <a href="index.html" class="brand-logo">Local Coffee Shop Locator</a>
-            </div>
-        </nav>
+        <!-- <header>
+            <img href=""
+        </header> -->
+        
         <div class="container">
             
             <!-- City Search Bar -->
-            <form class="col s12">
-                <div class="row coffee" title="coffee-shop-locator" id="location-row">
-                    <div class="col s6" id="inputCol">
-                        <div class="input-field">
-                        <input type="text" class="form-control validate" id="city-name" type="search" aria-label="Search" placeholder="Type your city here i.e. San Diego">
-                        <label for="city-name"></label>
-                        <i class="waves-effect waves-light btn searchBtn" id="searchBtn"><span class="fa fa-search"></span></i>
+            <div class="row" id="form-container">
+                <form class="col s12">
+                        <header>
+                            <div class="header-wrapper">
+                                <h1 href="index.html">Local Coffee Shop Locator</h1>
+                            </div>
+                        </header>
+                        
+                    <div class="row" title="coffee-shop-locator" id="location-row">
+                        <div class="col s6" id="inputCol">
+                            <div class="input-field">
+                            <input type="text" class="form-control validate" id="city-name" type="search" aria-label="Search" placeholder="Type your city here i.e. San Diego">
+                            <label for="city-name"></label>
+                            <i class="waves-effect waves-light btn searchBtn" id="searchBtn"><span class="fa fa-search"></span></i>
+                            </div>
+
+                            <div class="row" id="day-info-wrapper">
+                                <div class="col s9">
+                                    <div class="row" id="current-date"></div>
+                                    <div class="row" id="current-city"></div>
+                                    <div class="col" id="temp"></div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="row" id="current-icon"></div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                </div>
-            </form>
-
-            <!-- date and weather, this counts as one server side api, the moment js date might count as one server side api-->
-            <div class="row dayInfo-wrapper">
-                <div class="col s3"  id="current-date"></div>
-                <div class="col s3" id="current-city"></div>
-                <div class="col s3" id="current-icon"></div>
-                <div class="col s3" id="temp"></div>
+                </form>
             </div>
+
             <!-- break line -->
             <hr>          
 

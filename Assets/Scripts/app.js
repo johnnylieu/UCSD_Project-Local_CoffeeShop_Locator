@@ -1,7 +1,7 @@
 // beginning of Johnny's part
 // displays current date
 $(document).ready(function () {
-    $("#current-date").append("<p><strong>Today's Date:</strong></p>" + (moment().format('dddd, MMMM Do')));
+    $("#current-date").append("<strong>Today's Date:</strong>  " + (moment().format('dddd, MMMM Do')));
     // gets user's location
     navigator.geolocation.getCurrentPosition(function (position) {
         console.log(position);
@@ -18,23 +18,27 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response);
+            // console.log(response);
             const geoCity = response.name;
-            console.log(geoCity);
+            // console.log(geoCity);
             const country = response.sys.country;
-            console.log(country);
-            var currentIcon = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + ".png");
+            // console.log(country);
+            var currentIcon = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
+            currentIcon.css({
+                "position": 'absolute',
+                // "background-color": 'white'
+            });
             console.log(currentIcon);
             var rTemp0 = Math.floor(response.main.temp);
-            console.log(rTemp0);
+            // console.log(rTemp0);
 
             $("#temp").empty();
             $("#current-icon").empty();
             $("#current-city").empty();
 
-            $("#current-icon").prepend(currentIcon);
-            $("#temp").append("<p><strong>Current Temp:</strong></p> " + rTemp0 + "° F");
-            $("#current-city").append("<p><strong>Current City:</strong></p>" + geoCity + ", " + country);
+            $("#current-icon").append(currentIcon);
+            $("#temp").append("<strong>Current Temp:</strong>    " + rTemp0 + "° F");
+            $("#current-city").append("<strong>Current City:  </strong>" + geoCity + ", " + country);
         });
     })
 
@@ -62,8 +66,9 @@ searchBtn.on("click", function (event) {
         console.log(geoCity);
         const country = response.sys.country;
         console.log(country);
-        var currentIcon = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + ".png");
-        console.log(currentIcon);
+        var currentIcon = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
+        // console.log(currentIcon);
+        // This click event is getting a different icon than the ready function
         var rTemp0 = Math.floor(response.main.temp);
         console.log(rTemp0);
 
