@@ -2,7 +2,6 @@
 // displays current date
 $(document).ready(function () {
     $("#current-date").append("<p><strong>Today's Date:</strong></p>" + (moment().format('dddd, MMMM Do')));
-
     // gets user's location
     navigator.geolocation.getCurrentPosition(function (position) {
         console.log(position);
@@ -87,7 +86,7 @@ searchBtn.on("click", function (event) {
 
 // google maps
 // this works but does not load markers of the coffee shops on the map
-var map;
+let map;
 var infowindow;
 
 function initialize() {
@@ -97,7 +96,7 @@ function initialize() {
         lng: geoLon
     };
     // The map, centered at location
-    var map = new google.maps.Map(
+    map = new google.maps.Map(
         document.getElementById('map'), {
             zoom: 12,
             center: userLoc
@@ -131,17 +130,31 @@ function initialize() {
 function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
-            createMarker(results[i]);
-            console.log(results[i]);
+            createMarker(results[i], i);
+            console.log(results[i], i);
         }
     }
 }
 
-function createMarker(place) {
+function createMarker(place, index) {
     var placeLoc = place.geometry.location;
+    var latti = place.geometry.location.lat();
+    var longi = place.geometry.location.lng();
+    console.log(latti, longi);
     var marker = new google.maps.Marker({
         map: map,
-        position: (place.geometry.location)
+        position: {lat: latti, lng: longi},
+        // icon: {
+        //     url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+        //     // This marker is 20 pixels wide by 32 pixels high.
+        //     size: new google.maps.Size(20, 32),
+        //     // The origin for this image is (0, 0).
+        //     origin: new google.maps.Point(0, 0),
+        //     // The anchor for this image is the base of the flagpole at (0, 32).
+        //     anchor: new google.maps.Point(0, 32)
+        //   },
+        title: index + "",
+        zIndex: index,
     });
 
     google.maps.event.addListener(marker, 'click', function () {
