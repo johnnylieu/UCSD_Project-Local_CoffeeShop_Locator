@@ -23,22 +23,23 @@ $(document).ready(function () {
             // console.log(geoCity);
             const country = response.sys.country;
             // console.log(country);
-            var currentIcon = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
-            currentIcon.css({
-                "position": 'absolute',
+            var currentIcon = $("<img>")
+                .attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
+                currentIcon.css({
+                    "position": 'absolute',
                 // "background-color": 'white'
             });
             console.log(currentIcon);
             var rTemp0 = Math.floor(response.main.temp);
             // console.log(rTemp0);
 
+            $("#current-city").empty();
             $("#temp").empty();
             $("#current-icon").empty();
-            $("#current-city").empty();
 
-            $("#current-icon").append(currentIcon);
-            $("#temp").append("<strong>Current Temp:</strong>    " + rTemp0 + "° F");
             $("#current-city").append("<strong>Current City:  </strong>" + geoCity + ", " + country);
+            $("#temp").append("<strong>Current Temp: </strong>" + rTemp0 + "° F");
+            $("#current-icon").append(currentIcon);
         });
     })
 
@@ -66,7 +67,8 @@ searchBtn.on("click", function (event) {
         console.log(geoCity);
         const country = response.sys.country;
         console.log(country);
-        var currentIcon = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
+        var currentIcon = $("<img>")
+            .attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
         // console.log(currentIcon);
         // This click event is getting a different icon than the ready function
         var rTemp0 = Math.floor(response.main.temp);
@@ -83,9 +85,9 @@ searchBtn.on("click", function (event) {
         $("#current-icon").empty();
         $("#current-city").empty();
 
-        $("#current-city").prepend(currentIcon);
-        $("#temp").prepend("<p>Temperature: " + rTemp0 + "° F </p>");
-        $("#current-city").append("<p>" + geoCity + ", " + country + "</p>");
+        $("#current-city").append("<strong>Current City:  </strong>" + geoCity + ", " + country);
+        $("#temp").prepend("<strong>Current Temp: </strong>" + rTemp0 + "° F");
+        $("#current-icon").prepend(currentIcon);
     });
 });
 

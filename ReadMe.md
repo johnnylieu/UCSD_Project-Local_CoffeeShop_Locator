@@ -1,3 +1,48 @@
+# Local-Coffee-Shop-Locator
+
+This application will generate the locations of nearby coffee shops, relative to a city search, and the current weather conditions for the city. 
+
+Click this link to access the [Deployed Application](https://aaronkplatt.github.io/localCoffeeShops.github.io/)
+
+## Screenshots
+
+Here is an example of our site in action:
+
+![alt text](./Assets/Images/DeployedApplication.jpg?raw=true "Application Img1")
+
+## Usage 
+
+Click the the search bar underneath the title "Local Coffee Shop Locator" and type in your desired city to query, then push enter or click the search button. Then, use the left box to search the physical location of nearby shops, and identify which shop you'd like to know more about. Next, use the right had box to read through reviews of the selected shop to determine if you'd like to shop there. Additionally, when you search for a city and click search, you'll be provided with the current weather conditions to decided if you'd like to visit in person. 
+
+PLEASE NOTE: Our app currently only supports cafes in the USA.
+
+## Future Updates
+
+This application is a work in progress, future updates will include: 
+
+1. The ability to search specifically by city, state, and country.
+2. Functionality for storing up to 10 searches.
+3. Verify App using [Nu Html Checker](https://validator.w3.org/nu/) 
+4. Check for ADA compliance using [Accessibility Insights for Web](https://accessibilityinsights.io/docs/en/web/overview)
+
+## Feedback
+
+Share with us with any comments or questions to help us grow! Email matthew.shane.rogers@gmail.com.
+
+## Credits
+
+Thanks to Drew Maracle, Johnny L, Aaron Platt, Matt Rogers, Steven Landgraf, Chris Stead, and Trilogy Education for providing guidance.
+
+Google Maps API
+
+## License
+
+Licensed under the [MIT](LICENSE.txt) lincense.
+
+
+
+
+
 
 So we are making a coffee app
 The purpose of this app: find local and privately run businesses that are not part of chains. 

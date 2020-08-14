@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defersrc="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAS2x02bx7VMiqvBnO4mHdYrY2s7N2FSw_KEY&callback=initMap"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAS2x02bx7VMiqvBnO4mHdYrY2s7N2FSw&libraries=places"></script>
+    <script
+        defersrc="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAS2x02bx7VMiqvBnO4mHdYrY2s7N2FSw_KEY&callback=initMap"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAS2x02bx7VMiqvBnO4mHdYrY2s7N2FSw&libraries=places"></script>
     <title>Local Coffee Shops</title>
     <link rel="stylesheet" href="./Assets/Styles/style.css">
     <!-- <link rel="stylesheet" href="./Assets/Styles/materialize.css"> -->
@@ -16,7 +19,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css But unsure why this doesn't-->
     <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
-    
+
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -25,32 +28,30 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Local Coffee Shop Locator</title>
-    
+
 </head>
 
 <body>
     <main>
-        <!-- <header>
-            <img href=""
-        </header> -->
-        
         <div class="container">
-            
+
             <!-- City Search Bar -->
             <div class="row" id="form-container">
                 <form class="col s12">
-                        <header>
-                            <div class="header-wrapper">
-                                <h1 href="index.html">Local Coffee Shop Locator</h1>
-                            </div>
-                        </header>
-                        
+                    <header>
+                        <div class="header-wrapper">
+                            <h1 href="index.html">Local Coffee Shop Locator</h1>
+                        </div>
+                    </header>
+
                     <div class="row" title="coffee-shop-locator" id="location-row">
                         <div class="col s6" id="inputCol">
                             <div class="input-field">
-                            <input type="text" class="form-control validate" id="city-name" type="search" aria-label="Search" placeholder="Type your city here i.e. San Diego">
-                            <label for="city-name"></label>
-                            <i class="waves-effect waves-light btn searchBtn" id="searchBtn"><span class="fa fa-search"></span></i>
+                                <input type="text" class="form-control validate" id="city-name" type="search"
+                                    aria-label="Search" placeholder="Type your city here i.e. San Diego">
+                                <label for="city-name"></label>
+                                <i class="waves-effect waves-light btn searchBtn" id="searchBtn"><span
+                                        class="fa fa-search"></span></i>
                             </div>
 
                             <div class="row" id="day-info-wrapper">
@@ -70,22 +71,22 @@
             </div>
 
             <!-- break line -->
-            <hr>          
+            <hr>
 
             <!-- Map Display with options -->
             <div class="row">
                 <div class="col s6">
-                <div class="card" style="background-color: #9F956C;">
-                    <div class="card-image google-map-container">
-                        <!-- googleMap -->
+                    <div class="card" style="background-color: #9F956C;">
+                        <div class="card-image google-map-container">
+                            <!-- googleMap -->
+                        </div>
+                        <div class="card-content" id="map">
+                            <p>Google Map Should Go Here</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Click here to get directions</a>
+                        </div>
                     </div>
-                    <div class="card-content" id="map">
-                        <p>Google Map Should Go Here</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Click here to get directions</a>
-                    </div>
-                </div>
                 </div>
 
                 <!-- List of options with details with no more than 10 -->
@@ -99,18 +100,18 @@
                         </div>
                     </div>
                 </div>
-            </div>        
+            </div>
+            <!-- Footer -->
+            <footer class="page-footer" id="footer">
+                <div class="footer-copyright">
+                    <div class="container">
+                        Johnny, Aaron, Matt, Drew © 2020 Copyright Text
+                    </div>
+                </div>
+            </footer>
         </div>
     </main>
- 
-    <!-- Footer -->
-    <footer class="page-footer" id="footer">
-        <div class="footer-copyright">
-          <div class="container">
-          Johnny, Aaron, Matt, Drew © 2020 Copyright Text
-          </div>
-        </div>
-      </footer>
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <script src="./Assets/Scripts/app.js"></script>
@@ -118,4 +119,3 @@
 <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
 
 </html>
-

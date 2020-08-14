@@ -17,6 +17,9 @@ body {
 display: flex;
 min-height: 100vh;
 flex-direction: column;
+/* background-image:  url("../Images/Website\ Background.jpg");
+background-size: cover;
+background-repeat: no-repeat; */
 background-color: #CBBF7A;
 min-width: 28em;
 } 
@@ -24,6 +27,18 @@ min-width: 28em;
 main {
   flex: 1 0 auto;
 } 
+
+/* Form Styling */
+
+#form-container {
+  height: 100%;
+  width: 100%; 
+  margin-bottom: 5px;
+  background-image: url("../Images/Coffee\ Background.jpg");
+  background-size: cover; 
+  background-position: center;
+  overflow: inherit;
+}
 
 /* Header Styling */
 .header-wrapper {
@@ -40,28 +55,6 @@ main {
 .icon-block .material-icons {
   font-size: inherit;
 }
-  
-/* Background Picture */
-#form-container {
-  height: 350px;
-  width: 100%; 
-  margin-bottom: 5px;
-  background-image: url("../Images/Coffee\ Background.jpg");
-  background-size: cover; 
-  background-position: center;
-}
-
-/* Form Styling */
-
-  /* Background Picture */
-#form-container {
-  height: 350px;
-  width: 100%; 
-  margin-bottom: 5px;
-  background-image: url("../Images/Coffee\ Background.jpg");
-  background-size: cover; 
-  background-position: center;
-}
 
 #location-row {
   display: flex;
@@ -74,15 +67,17 @@ main {
 
   /* Input Styling */
 #city-name {
+  width: 80%;
   color: white;
   background-color: transparent;
-  width: 80%;
+  overflow: hidden;
 }
 
 #inputCol {
   margin-top:0px;
   margin-left: 0px;
   padding-top:0px;
+  overflow: hidden;
 }
 
 input::placeholder {
@@ -110,6 +105,9 @@ input::placeholder {
 }
 
 /* Daily Info Styling */
+#day-info-wrapper {
+  width: 100%;
+}
 
 #current-date {
   margin-left: 3.5rem;
@@ -126,9 +124,9 @@ input::placeholder {
   color: white;
 }
 
-/* #current-icon {
-
-} */
+#current-icon {
+  
+}
 
 /* Card Styling */
 .card {
@@ -145,3 +143,5 @@ width: 100%;
 #footer {
   background-color: #584D3D;
 }
+
+/* Meida Queries */
