@@ -1,6 +1,23 @@
 // beginning of Johnny's part
 // displays current date
 $(document).ready(function () {
+
+// Makes sure the cards stack vertically
+    var alterClass = function () {
+        var ww = document.body.clientWidth;
+        if (ww < 500) {
+            $('#map-review-container').removeClass('row');
+        } else if (ww >= 401) {
+            $('#map-review-container').addClass('row');
+        };
+    };
+    $(window).resize(function () {
+        alterClass();
+    });
+    //Fire it when the page first loads:
+    alterClass();
+
+
     $("#current-date").append("<strong>Today's Date:</strong>  " + (moment().format('dddd, MMMM Do')));
     // gets user's location
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -25,9 +42,8 @@ $(document).ready(function () {
             // console.log(country);
             var currentIcon = $("<img>")
                 .attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
-                currentIcon.css({
-                    "position": 'absolute',
-                // "background-color": 'white'
+            currentIcon.css({
+                "position": 'absolute'
             });
             console.log(currentIcon);
             var rTemp0 = Math.floor(response.main.temp);
@@ -104,9 +120,9 @@ function initialize() {
     // The map, centered at location
     map = new google.maps.Map(
         document.getElementById('map'), {
-            zoom: 12,
-            center: userLoc
-        });
+        zoom: 12,
+        center: userLoc
+    });
 
     // The marker, positioned at user's location
     var marker = new google.maps.Marker({
@@ -126,7 +142,7 @@ function initialize() {
     var request = {
         location: userLoc,
         radius: 8047,
-        types: ['cafe']
+        types: ['cafe'] //This is what the cafe is searching for
     };
     infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
@@ -150,7 +166,7 @@ function createMarker(place, index) {
     console.log(place.name);
     var marker = new google.maps.Marker({
         map: map,
-        position: {lat: latti, lng: longi},
+        position: { lat: latti, lng: longi },
         // icon: {
         //     url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
         //     // This marker is 20 pixels wide by 32 pixels high.

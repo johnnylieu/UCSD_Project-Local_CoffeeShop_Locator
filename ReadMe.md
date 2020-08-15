@@ -33,7 +33,7 @@ Share with us with any comments or questions to help us grow! Email matthew.shan
 
 Thanks to Drew Maracle, Johnny L, Aaron Platt, Matt Rogers, Steven Landgraf, Chris Stead, and Trilogy Education for providing guidance.
 
-Google Maps API
+Google Maps API -- We need to explain how this api searches, what are the parameters for the search (this searches CAFE)
 
 ## License
 
