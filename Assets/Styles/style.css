@@ -131,10 +131,9 @@ input::placeholder {
 } */
 
 /* Map & Review Row */
-/* #map-review-container {
-  display: flex;
-  flex-wrap: wrap;
-} */
+#map-review-container {
+display: none;
+}
 
 /* Card Styling */
 .card {
