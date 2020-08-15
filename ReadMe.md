@@ -35,7 +35,7 @@ Share with us with any comments or questions to help us grow! Email matthew.shan
 
 Thanks to Drew Maracle, Johnny L, Aaron Platt, Matt Rogers, Steven Landgraf, Chris Stead, and Trilogy Education for providing guidance.
 
-Credit to [Richard Barratt](https://codepen.io/richerimage/pen/jEXWWG) for helpiing us format our app to be mobile friendly
+Credit to [Richard Barratt](https://codepen.io/richerimage/pen/jEXWWG) for helping us format our app to be mobile friendly
 
 ## License
 

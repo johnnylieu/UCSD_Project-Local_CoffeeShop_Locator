@@ -18,7 +18,7 @@ $(document).ready(function () {
     $(window).resize(function () {
         alterClass();
     });
-    //Fire it when the page first loads:
+    //Render it when the page first loads:
     alterClass();
 
 
