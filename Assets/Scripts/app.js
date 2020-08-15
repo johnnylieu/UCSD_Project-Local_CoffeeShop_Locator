@@ -23,7 +23,16 @@ $(document).ready(function () {
 
 
     $("#current-date").append("<strong>Today's Date:</strong>  " + (moment().format('dddd, MMMM Do')));
-    // gets user's location
+
+});
+
+// gets user's location
+$("#locationBtn").on("click", function (event) {
+    event.preventDefault();
+    // hides the map and review row until search button is clicked
+    if (event) {
+        $('#map-review-container').css("display", "initial");
+    }
     navigator.geolocation.getCurrentPosition(function (position) {
         console.log(position);
         geoLat = position.coords.latitude;
@@ -62,7 +71,6 @@ $(document).ready(function () {
             $("#current-icon").append(currentIcon);
         });
     })
-
 });
 
 // grabbing user's inputted location
@@ -75,7 +83,7 @@ searchBtn.on("click", function (event) {
     // hides the map and review row until search button is clicked
     if (event) {
         $('#map-review-container').css("display", "initial");
-    }  
+    }
 
     var button = $(this);
     console.log("click");
@@ -131,9 +139,9 @@ function initialize() {
     // The map, centered at location
     map = new google.maps.Map(
         document.getElementById('map'), {
-        zoom: 12,
-        center: userLoc
-    });
+            zoom: 12,
+            center: userLoc
+        });
 
     // The marker, positioned at user's location
     var marker = new google.maps.Marker({
@@ -175,7 +183,7 @@ function callback(results, status) {
             var rating = results[i].rating;
             console.log(rating);
             var cardAction = $("#reviews");
-            
+
             // displays names and ratings with link to get directions
             cardAction.append("<p><a href = https://www.google.com/maps/search/?api=1&query=" + latYo + "," + longYo + ">" + name + " " + rating + "</a></p>");
         }
@@ -191,7 +199,10 @@ function createMarker(place, index) {
     console.log(place.name);
     var marker = new google.maps.Marker({
         map: map,
-        position: { lat: latti, lng: longi },
+        position: {
+            lat: latti,
+            lng: longi
+        },
         // icon: {
         //     url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
         //     // This marker is 20 pixels wide by 32 pixels high.
