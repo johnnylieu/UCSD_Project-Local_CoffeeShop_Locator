@@ -66,6 +66,7 @@ var searchBtn = $("#searchBtn")
 
 searchBtn.on("click", function (event) {
     event.preventDefault();
+    $("#reviews").empty();
 
     // $('#map-review-container')
     // // Makes sure the cards stack vertically
@@ -183,7 +184,7 @@ function callback(results, status) {
             var rating = results[i].rating;
             console.log(rating);
             var cardAction = $("#reviews");
-
+            
             // displays names and ratings with link to get directions
             cardAction.append("<p><a href = https://www.google.com/maps/search/?api=1&query=" + latYo + "," + longYo + ">" + name + " " + rating + "</a></p>");
         }
