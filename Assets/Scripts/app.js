@@ -3,8 +3,8 @@
 $(document).ready(function () {
 
     // Makes sure the cards stack vertically
-    var alterClass = function () {
-        var ww = document.body.clientWidth;
+    let alterClass = function () {
+        let ww = document.body.clientWidth;
         if (ww < 500) {
             $('#map-review-container').removeClass('row');
         } else if (ww >= 401) {
@@ -68,23 +68,10 @@ searchBtn.on("click", function (event) {
     event.preventDefault();
     $("#reviews").empty();
 
-    // $('#map-review-container')
-    // // Makes sure the cards stack vertically
-    // var alterClass = function () {
-    //     var ww = document.body.clientWidth;
-    //     if (ww < 500) {
-    //         $('#map-review-container').removeClass('row');
-    //     } else if (ww >= 401) {
-    //         $('#map-review-container').addClass('row');
-    //     };
-    // };
-    // $(window).resize(function () {
-    //     alterClass();
-    // });
-    // //Fire it when the page first loads:
-    // alterClass();    
-    let change = "";
-
+    // hides the map and review row until search button is clicked
+    if (event) {
+        $('#map-review-container').css("display", "initial");
+    }  
 
     var button = $(this);
     console.log("click");
