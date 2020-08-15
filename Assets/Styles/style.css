@@ -168,8 +168,7 @@ width: 100%;
 /* Meida Queries */
 
 /* @media only screen and (max-width: 400px) {
-  #google-map-container::after {
-    content: "\a";
-    white-space: pre;
+  #google-map-container {
+    display: none;
   }
 } */
