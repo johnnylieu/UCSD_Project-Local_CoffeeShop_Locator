@@ -7,8 +7,12 @@ $(document).ready(function () {
         let ww = document.body.clientWidth;
         if (ww < 500) {
             $('#map-review-container').removeClass('row');
+            $('#current-icon').hide(); //materialize helper
+            // $('#current-icon').css('display', 'none')
         } else if (ww >= 401) {
             $('#map-review-container').addClass('row');
+            $('#current-icon').show(); //materialize helper
+            // $('#current-icon').css('display', 'show')
         };
     };
     $(window).resize(function () {

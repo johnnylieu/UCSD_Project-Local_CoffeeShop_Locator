@@ -8,13 +8,13 @@ Click this link to access the [Deployed Application](https://aaronkplatt.github.
 
 Here is an example of our site in action:
 
-![alt text](./Assets/Images/DeployedApplication.jpg?raw=true "Application Img1")
+![alt text](https://raw.githubusercontent.com/aaronkplatt/localCoffeeShops.github.io/master/Assets/Images/Deployed%20Application.JPG "Application Img1")
 
 ## Usage 
 
 Click the the search bar underneath the title "Local Coffee Shop Locator" and type in your desired city to query, then push enter or click the search button. Then, use the left box to search the physical location of nearby shops, and identify which shop you'd like to know more about. Next, use the right had box to read through reviews of the selected shop to determine if you'd like to shop there. Additionally, when you search for a city and click search, you'll be provided with the current weather conditions to decided if you'd like to visit in person. 
 
-PLEASE NOTE: Our app currently only supports cafes in the USA.
+PLEASE NOTE: Our app currently only supports cafes in the USA, it can search cities outside the USA in general but not with the accuracy of individual states and countries. 
 
 ## Future Updates
 
@@ -24,6 +24,8 @@ This application is a work in progress, future updates will include:
 2. Functionality for storing up to 10 searches.
 3. Verify App using [Nu Html Checker](https://validator.w3.org/nu/) 
 4. Check for ADA compliance using [Accessibility Insights for Web](https://accessibilityinsights.io/docs/en/web/overview)
+5. Make search button function with click event AND pressing enter
+6. Making our Google Maps API more comprehensive. Currently the API uses the keyword "cafe" to search, some local coffee shops may be excluded nearest to your location.
 
 ## Feedback
 
@@ -33,7 +35,7 @@ Share with us with any comments or questions to help us grow! Email matthew.shan
 
 Thanks to Drew Maracle, Johnny L, Aaron Platt, Matt Rogers, Steven Landgraf, Chris Stead, and Trilogy Education for providing guidance.
 
-Google Maps API -- We need to explain how this api searches, what are the parameters for the search (this searches CAFE)
+Credit to [Richard Barratt](https://codepen.io/richerimage/pen/jEXWWG) for helpiing us format our app to be mobile friendly
 
 ## License
 
