@@ -81,8 +81,8 @@ searchBtn.on("click", function (event) {
     //     alterClass();
     // });
     // //Fire it when the page first loads:
-    // alterClass();
-// change
+    // alterClass();    
+    let change = "";
 
 
     var button = $(this);
