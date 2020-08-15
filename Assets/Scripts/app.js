@@ -66,6 +66,7 @@ var searchBtn = $("#searchBtn")
 
 searchBtn.on("click", function (event) {
     event.preventDefault();
+    $("#reviews").empty();
 
     // hides the map and review row until search button is clicked
     if (event) {
@@ -160,9 +161,23 @@ function callback(results, status) {
         for (var i = 0; i < results.length; i++) {
             createMarker(results[i], i);
             console.log(results[i], i);
+
+            var latYo = results[i].geometry.location.lat();
+            console.log(latYo);
+            var longYo = results[i].geometry.location.lng();
+            console.log(longYo);
+            var name = results[i].name;
+            console.log(name);
+            var rating = results[i].rating;
+            console.log(rating);
+            var cardAction = $("#reviews");
+            
+            // displays names and ratings with link to get directions
+            cardAction.append("<p><a href = https://www.google.com/maps/search/?api=1&query=" + latYo + "," + longYo + ">" + name + " " + rating + "</a></p>");
         }
     }
 }
+
 
 function createMarker(place, index) {
     var placeLoc = place.geometry.location;
