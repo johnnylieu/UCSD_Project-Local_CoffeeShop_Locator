@@ -185,7 +185,7 @@ function callback(results, status) {
             var cardAction = $("#reviews");
 
             // displays names and ratings with link to get directions
-            cardAction.append("<p><a href = https://www.google.com/maps/search/?api=1&query=" + latYo + "," + longYo + ">" + name + " " + rating + "</a></p>");
+            cardAction.append("<p><a target='_blank' href = https://www.google.com/maps/search/?api=1&query=" + latYo + "," + longYo + ">" + name + " " + rating + "</a></p>");
         }
     }
 }
