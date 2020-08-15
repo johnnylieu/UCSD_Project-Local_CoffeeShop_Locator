@@ -17,6 +17,7 @@ body {
 display: flex;
 min-height: 100vh;
 flex-direction: column;
+flex-wrap: wrap;
 /* background-image:  url("../Images/Website\ Background.jpg");
 background-size: cover;
 background-repeat: no-repeat; */
@@ -33,7 +34,8 @@ main {
 #form-container {
   height: 100%;
   width: 100%; 
-  margin-bottom: 5px;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
   background-image: url("../Images/Coffee\ Background.jpg");
   background-size: cover; 
   background-position: center;
@@ -65,7 +67,7 @@ main {
   margin: auto;
 }
 
-  /* Input Styling */
+/* Input Styling */
 #city-name {
   width: 80%;
   color: white;
@@ -124,14 +126,33 @@ input::placeholder {
   color: white;
 }
 
-#current-icon {
+/* #current-icon {
   
-}
+} */
+
+/* Map & Review Row */
+/* #map-review-container {
+  display: flex;
+  flex-wrap: wrap;
+} */
 
 /* Card Styling */
 .card {
     background-color: #9F956C;
 }
+
+/* #google-map-container {
+  min-width: 300px;
+} */
+
+/* #google-map-container::after {
+  content: "&#xa";
+  white-space: pre;
+} */
+
+/* #reviews-container {
+  min-width: 300px;
+} */
 
 /* Google map styling*/
 #map {
@@ -145,3 +166,10 @@ width: 100%;
 }
 
 /* Meida Queries */
+
+/* @media only screen and (max-width: 400px) {
+  #google-map-container::after {
+    content: "\a";
+    white-space: pre;
+  }
+} */
