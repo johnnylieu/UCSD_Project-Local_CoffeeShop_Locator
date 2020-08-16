@@ -40,6 +40,7 @@ $("#locationBtn").on("click", function (event) {
         console.log(geoLat, geoLon);
 
         // loads user's location in google map
+        $("#reviews").empty();
         initialize();
 
         // grabs weather for user's location
