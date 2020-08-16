@@ -188,7 +188,7 @@ function callback(results, status) {
 
             // displays names and ratings with link to get directions
             cardAction.append("<h6><strong>" + name + "</strong></h6>");
-            cardAction.append("<p id='stars'>" + getStars() + ratings  + "</p>");
+            cardAction.append("<p id='stars'>" + ratings + "  " + getStars()  + "</p>");
             cardAction.append("<p><a target='_blank' href = https://www.google.com/maps/search/?api=1&query=" + latYo + "," + longYo + ">" + "Directions" + "</a></p>");
             cardAction.append("<p><a target='_blank' href = https://search.google.com/local/reviews?placeid=" + placesId + ">" + "Reviews" + "</a></p>");
             cardAction.append("<hr>");
