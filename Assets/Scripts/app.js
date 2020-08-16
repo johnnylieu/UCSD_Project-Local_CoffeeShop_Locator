@@ -180,12 +180,17 @@ function callback(results, status) {
             console.log(longYo);
             var name = results[i].name;
             console.log(name);
+            var placesId = results[i].place_id;
+            console.log(placesId);
             var rating = results[i].rating;
             console.log(rating);
             var cardAction = $("#reviews");
 
             // displays names and ratings with link to get directions
-            cardAction.append("<p><a target='_blank' href = https://www.google.com/maps/search/?api=1&query=" + latYo + "," + longYo + ">" + name + " " + rating + "</a></p>");
+            cardAction.append("<p><strong>" + name + " " + rating + "</strong></p>");
+            cardAction.append("<p><a target='_blank' href = https://www.google.com/maps/search/?api=1&query=" + latYo + "," + longYo + ">" + "Directions" + "</a></p>");
+            cardAction.append("<p><a target='_blank' href = https://search.google.com/local/reviews?placeid=" + placesId + ">" + "Reviews" + "</a></p>");
+            cardAction.append("<hr>");
         }
     }
 }
