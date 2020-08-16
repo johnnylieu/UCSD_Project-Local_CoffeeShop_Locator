@@ -182,16 +182,39 @@ function callback(results, status) {
             console.log(name);
             var placesId = results[i].place_id;
             console.log(placesId);
-            var rating = results[i].rating;
-            console.log(rating);
+            var ratings = results[i].rating;
+            console.log(ratings);
             var cardAction = $("#reviews");
 
             // displays names and ratings with link to get directions
             cardAction.append("<h6><strong>" + name + "</strong></h6>");
-            cardAction.append("<p>" + "rating: " + rating + "/5" + "</p>");
+            cardAction.append("<p id='stars'>" + getStars() + ratings  + "</p>");
             cardAction.append("<p><a target='_blank' href = https://www.google.com/maps/search/?api=1&query=" + latYo + "," + longYo + ">" + "Directions" + "</a></p>");
             cardAction.append("<p><a target='_blank' href = https://search.google.com/local/reviews?placeid=" + placesId + ">" + "Reviews" + "</a></p>");
             cardAction.append("<hr>");
+
+            // document.getElementById("stars").innerHTML = getStars(ratings);
+
+            function getStars() {
+
+                // Round to nearest half
+                ratings = Math.round(ratings * 2) / 2;
+                let output = [];
+
+                // Append all the filled whole stars
+                for (var i = ratings; i >= 1; i--)
+                    output.push('<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+                // If there is a half a star, append it
+                if (i == .5) output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+                // Fill the empty stars
+                for (let i = (5 - ratings); i >= 1; i--)
+                    output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+                return output.join('');
+
+            }
         }
     }
 }
