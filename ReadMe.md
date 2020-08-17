@@ -33,7 +33,7 @@ Share with us with any comments or questions to help us grow! Email matthew.shan
 
 ## Credits
 
-Thanks to Drew Maracle, Johnny L, Aaron Platt, Matt Rogers, Steven Landgraf, Chris Stead, and Trilogy Education for providing guidance.
+Thanks to Johnny Lieu, Drew Maracle, Aaron Platt, Matt Rogers, Steven Landgraf, Chris Stead, and Trilogy Education for providing guidance.
 
 Credit to [Richard Barratt](https://codepen.io/richerimage/pen/jEXWWG) for helping us format our app to be mobile friendly
 
