@@ -194,7 +194,7 @@ function callback(results, status) {
             console.log(ratings);
             var cardAction = $("#reviews");
 
-            // displays names and ratings with link to get directions, unless it's a big corporation
+            // displays names and ratings with link to get directions of "mom and pops" coffee shops
             if (name !== "Starbucks" && name !== "Barnes & Noble" && name !== "McDonald's" && name !== "Yum Yum Donuts" && name !== "Coffee Bean" && name !== "Panera Bread") {
                 cardAction.append("<h6><strong>" + name + "</strong></h6>");
                 cardAction.append("<p id='stars'>" + ratings + "  " + getStars() + "</p>");
