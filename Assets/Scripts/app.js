@@ -195,7 +195,7 @@ function callback(results, status) {
             var cardAction = $("#reviews");
 
             // displays names and ratings with link to get directions of "mom and pops" coffee shops
-            if (name !== "Starbucks" && name !== "Barnes & Noble" && name !== "McDonald's" && name !== "Yum Yum Donuts" && name !== "Coffee Bean" && name !== "Panera Bread") {
+            if (name !== "Starbucks" && name !== "Barnes & Noble" && name !== "McDonald's" && name !== "Yum Yum Donuts" && name !== "Coffee Bean" && name !== "Panera Bread" && name !== "Yum Yum Donuts") {
                 cardAction.append("<h6><strong>" + name + "</strong></h6>");
                 cardAction.append("<p id='stars'>" + ratings + "  " + getStars() + "</p>");
                 cardAction.append("<p><a target='_blank' href = https://www.google.com/maps/search/?api=1&query=" + latYo + "," + longYo + ">" + "Directions" + "</a></p>");
