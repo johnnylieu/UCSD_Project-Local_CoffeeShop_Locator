@@ -11,14 +11,11 @@
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAS2x02bx7VMiqvBnO4mHdYrY2s7N2FSw&libraries=places"></script>
     <title>Local Coffee Shops</title>
+    <!-- CSS Style Sheet -->
     <link rel="stylesheet" href="./Assets/Styles/style.css">
-    <!-- <link rel="stylesheet" href="./Assets/Styles/materialize.css"> -->
-    <!-- <link rel="stylesheet" href="./Assets/Styles/materialize.min.css"> -->
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css But unsure why this doesn't-->
-    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -28,14 +25,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Local Coffee Shop Locator</title>
-
 </head>
 
 <body>
     <main>
         <div class="container">
 
-            <!-- City Search Bar -->
+            <!-- City Search Bar + Header -->
             <div class="row" id="form-container">
                 <form class="col s12">
                     <header>
@@ -46,6 +42,8 @@
 
                     <div class="row" title="coffee-shop-locator" id="location-row">
                         <div class="col s6" id="inputCol">
+                
+                            <!-- User's Input -->
                             <div class="input-field">
                                 <input type="text" class="form-control validate" id="city-name" type="search"
                                     aria-label="Search" placeholder="Type your city here i.e. San Diego">
@@ -53,10 +51,11 @@
                                 <i class="waves-effect waves-light btn searchBtn" id="searchBtn"><span
                                         class="fa fa-search"></span></i>
 
-                                <i class="waves-effect waves-light btn searchBtn" id="locationBtn">Click Here To Get Your Location <span
-                                        class="fa fa-map-marker"></span></i>
+                                <i class="waves-effect waves-light btn searchBtn" id="locationBtn">Click Here To Get
+                                    Your Location <span class="fa fa-map-marker"></span></i>
                             </div>
 
+                            <!-- Showing locations INFO -->
                             <div class="row" id="day-info-wrapper">
                                 <div class="col s9">
                                     <div class="row" id="current-date"></div>
@@ -67,7 +66,6 @@
                                     <div class="row" id="current-icon"></div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </form>
@@ -77,28 +75,27 @@
             <hr>
 
             <!-- Map Display with options -->
-            <div class="row" id="map-review-container">
-                <div class="col s6">
-                    <div class="card" id="google-map-container" style="background-color: #9F956C;">
-                        <div class="card-image">
-                            <!-- googleMap -->
-                        </div>
-                        <div class="card-content" id="map"></div>
+            <div class="row" id="map-container">
+                <div class="card" style="background-color: #9F956C;">
+                    <div class="card-image">
+                        <!-- googleMap -->
                     </div>
+                    <div class="card-content" id="map"></div>
                 </div>
+            </div>
 
-                <!-- List of options with details with no more than 10 -->
-                <div class="col s6">
-                    <div class="card" id="reviews-container" style="background-color: #9F956C;">
-                        <div class="card-content white-text">
-                            <span class="card-title">Reviews:</span>
-                        </div>
-                        <div class="card-action">
-                            <div id="reviews"></div>
-                        </div>
+            <!-- List of options with details with no more than 10 -->
+            <div class="row" id="reviews-container">
+                <div class="card" style="background-color: #9F956C;">
+                    <div class="card-content white-text">
+                        <span class="card-title">Reviews:</span>
+                    </div>
+                    <div class="card-action">
+                        <div id="reviews"></div>
                     </div>
                 </div>
             </div>
+
             <!-- Footer -->
             <footer class="page-footer" id="footer">
                 <div class="footer-copyright">
@@ -113,6 +110,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <script src="./Assets/Scripts/app.js"></script>
 <!--JavaScript at end of body for optimized loading-->
-<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
 
 </html>

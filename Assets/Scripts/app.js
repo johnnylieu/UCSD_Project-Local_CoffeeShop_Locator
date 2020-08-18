@@ -3,18 +3,18 @@
 $(document).ready(function () {
 
     // Makes sure the cards stack vertically
-    let alterClass = function () {
-        let ww = document.body.clientWidth;
-        if (ww < 500) {
-            $('#map-review-container').removeClass('row');
-            $('#current-icon').hide(); //materialize helper
-            // $('#current-icon').css('display', 'none')
-        } else if (ww >= 401) {
-            $('#map-review-container').addClass('row');
-            $('#current-icon').show(); //materialize helper
-            // $('#current-icon').css('display', 'show')
-        };
-    };
+    // let alterClass = function () {
+    //     let ww = document.body.clientWidth;
+    //     if (ww < 500) {
+    //         $('#map-review-container').removeClass('row');
+    //         $('#current-icon').hide(); //materialize helper
+    //         // $('#current-icon').css('display', 'none')
+    //     } else if (ww >= 401) {
+    //         $('#map-review-container').addClass('row');
+    //         $('#current-icon').show(); //materialize helper
+    //         // $('#current-icon').css('display', 'show')
+    //     };
+    // };
     $(window).resize(function () {
         alterClass();
     });
@@ -38,7 +38,8 @@ $("#locationBtn").on("click", function (event) {
     event.preventDefault();
     // hides the map and review row until search button is clicked
     if (event) {
-        $('#map-review-container').css("display", "initial");
+        $('#map-container').css("display", "initial");
+        $('#reviews-container').css("display", "initial");
     }
     navigator.geolocation.getCurrentPosition(function (position) {
         console.log(position);
@@ -90,7 +91,8 @@ searchBtn.on("click", function (event) {
 
     // hides the map and review row until search button is clicked
     if (event) {
-        $('#map-review-container').css("display", "initial");
+        $('#map-container').css("display", "initial");
+        $('#reviews-container').css("display", "initial");
     }
 
     var button = $(this);
