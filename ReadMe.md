@@ -21,12 +21,11 @@ PLEASE NOTE: Our app currently only supports cafes in the USA, it can search cit
 This application is a work in progress, future updates will include: 
 
 1. The ability to search specifically by city, state, and country.
-2. Functionality for storing up to 10 searches.
-3. Verify App using [Nu Html Checker](https://validator.w3.org/nu/) 
-4. Check for ADA compliance using [Accessibility Insights for Web](https://accessibilityinsights.io/docs/en/web/overview)
-5. Make search button function with click event AND pressing enter
-6. Making our Google Maps API more comprehensive. Currently the API uses the keyword "cafe" to search, some local coffee shops may be excluded nearest to your location.
-7. Verifying the user has inputted text into the input tag, preventing the search button from running.
+2. Functionality for storing up to 10 searches. 
+3. Check for ADA compliance using [Accessibility Insights for Web](https://accessibilityinsights.io/docs/en/web/overview)
+4. Make search button function with click event AND pressing enter
+5. Making our Google Maps API more comprehensive. Currently the API uses the keyword "cafe" to search, some local coffee shops may be excluded nearest to your location.
+6. Verifying the user has inputted text into the input tag, preventing the search button from running.
 
 ## Feedback
 
@@ -35,6 +34,8 @@ Share with us with any comments or questions to help us grow! Email matthew.shan
 ## Credits
 
 Thanks to Johnny Lieu, Drew Maracle, Aaron Platt, Matt Rogers, Steven Landgraf, Chris Stead, and Trilogy Education for providing guidance.
+
+Verifyied App using [Nu Html Checker](https://validator.w3.org/nu/)
 
 Credit to [Richard Barratt](https://codepen.io/richerimage/pen/jEXWWG) for helping us format our app to be mobile friendly
 
