@@ -5,32 +5,29 @@
  *
  * Made By MaterializeCSS.com
  */
+ /* COLORS
  /* 584D3D dark lava */
  /* 9F956C artichoke */
  /* CBBF7A Misty Moss */
  /* F4E87C Yellow Crayola */
  /* EBF38B Key Lime */
 
-/* To create Sticky Footer */
 body {
-/* locks website width but not viewing width */
-display: flex;
-min-height: 100vh;
-flex-direction: column;
-flex-wrap: wrap;
-/* background-image:  url("../Images/Website\ Background.jpg");
-background-size: cover;
-background-repeat: no-repeat; */
-background-color: #CBBF7A;
-min-width: 28em;
+  /* locks website width but not viewing width */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #CBBF7A;
+  min-width: 28em;
 } 
 
+/* Sticky Footer */
 main {
   flex: 1 0 auto;
 } 
 
 /* Form Styling */
-
 #form-container {
   height: 100%;
   width: 100%; 
@@ -98,7 +95,7 @@ input::placeholder {
 /* Button Styling */
 #searchBtn {
   position: absolute;
-  height: 80%;
+  height: 50%;
   min-height: 20px;
   line-height: 20px;
   text-align: center;
@@ -126,12 +123,8 @@ input::placeholder {
   color: white;
 }
 
-/* #current-icon {
-  
-} */
-
 /* Map & Review Row */
-#map-review-container {
+#map-container, #reviews-container {
 display: none;
 }
 
@@ -139,19 +132,9 @@ display: none;
 .card {
     background-color: #9F956C;
 }
-
-/* #google-map-container {
-  min-width: 300px;
-} */
-
-/* #google-map-container::after {
-  content: "&#xa";
-  white-space: pre;
-} */
-
-/* #reviews-container {
-  min-width: 300px;
-} */
+.card-title{
+  text-align: center;
+}
 
 /* Google map styling*/
 #map {
@@ -163,11 +146,3 @@ width: 100%;
 #footer {
   background-color: #584D3D;
 }
-
-/* Meida Queries */
-
-/* @media only screen and (max-width: 400px) {
-  #google-map-container {
-    display: none;
-  }
-} */
