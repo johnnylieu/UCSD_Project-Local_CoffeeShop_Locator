@@ -6,10 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script
-        defersrc="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAS2x02bx7VMiqvBnO4mHdYrY2s7N2FSw_KEY&callback=initMap"></script>
-    <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAS2x02bx7VMiqvBnO4mHdYrY2s7N2FSw&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAS2x02bx7VMiqvBnO4mHdYrY2s7N2FSw_KEY&callback=initMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAS2x02bx7VMiqvBnO4mHdYrY2s7N2FSw&libraries=places"></script>
     <title>Local Coffee Shops</title>
     <!-- CSS Style Sheet -->
     <link rel="stylesheet" href="./Assets/Styles/style.css">
@@ -36,17 +34,16 @@
                 <form class="col s12">
                     <header>
                         <div class="header-wrapper">
-                            <h1 href="index.html">Local Coffee Shop Locator</h1>
+                            <h1>Local Coffee Shop Locator</h1>
                         </div>
                     </header>
 
-                    <div class="row" title="coffee-shop-locator" id="location-row">
+                    <div class="row" id="location-row">
                         <div class="col s6" id="inputCol">
 
                             <!-- User's Input -->
                             <div class="input-field">
-                                <input type="text" class="form-control validate" id="city-name" type="search"
-                                    aria-label="Search" placeholder="Type your city here i.e. San Diego">
+                                <input type="text" class="form-control validate" id="city-name" aria-label="Search" placeholder="Type your city here i.e. San Diego">
                                 <label for="city-name"></label>
                                 <i class="waves-effect waves-light btn searchBtn" id="searchBtn"><span
                                         class="fa fa-search"></span></i>
@@ -87,8 +84,8 @@
             <!-- List of options with details with no more than 10 -->
             <div class="row" id="reviews-container">
                 <div class="card" style="background-color: #9F956C;">
-                    <div class="card-content white-text" id="reviews-title">
-                        <span class="card-title"><h3>Reviews:</h3></span>
+                    <div class="card-content white-text" id="reviews-title-container">
+                        <span class="card-title" id="reviews-title"><strong>Reviews:</strong></span>
                     </div>
                     <div class="card-action">
                         <div id="reviews"></div>
@@ -107,8 +104,8 @@
     </main>
 
 </body>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <script src="./Assets/Scripts/app.js"></script>
-<!--JavaScript at end of body for optimized loading-->
 
 </html>
