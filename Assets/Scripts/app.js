@@ -179,58 +179,72 @@ function initialize() {
 };
 
 function callback(results, status) {
+    var cafeObjectArray = []
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
+            var cafeObject = {
+                latitude: "",
+                longitude: "",
+                name: "",
+                rating: "",
+                place: ""
+            }
             createMarker(results[i], i);
             console.log(results[i], i);
-
-            var latYo = results[i].geometry.location.lat();
-            console.log(latYo);
-            var longYo = results[i].geometry.location.lng();
-            console.log(longYo);
-            var name = results[i].name;
-            console.log(name);
-            var placesId = results[i].place_id;
-            console.log(placesId);
-            var ratings = results[i].rating;
-            console.log(ratings);
-            var cardAction = $("#reviews");
-
-            // displays names and ratings with link to get directions of "mom and pops" coffee shops
-            if (name !== "Starbucks" && name !== "Barnes & Noble" && name !== "McDonald's" && name !== "Yum Yum Donuts" && name !== "Coffee Bean" && name !== "Panera Bread" && name !== "Yum Yum Donuts") {
-                cardAction.append("<h6><strong>" + name + "</strong></h6>");
-                cardAction.append("<p id='stars'>" + ratings + "  " + getStars() + "</p>");
-                cardAction.append("<p><a target='_blank' href = https://www.google.com/maps/search/?api=1&query=" + latYo + "," + longYo + ">" + "Directions" + "</a></p>");
-                cardAction.append("<p><a target='_blank' href = https://search.google.com/local/reviews?placeid=" + placesId + ">" + "Reviews" + "</a></p>");
-                cardAction.append("<hr>");
-            };
-
-            // document.getElementById("stars").innerHTML = getStars(ratings);
-
-            function getStars() {
-
-                // Round to nearest half
-                ratings = Math.round(ratings * 2) / 2;
-                let output = [];
-
-                // Append all the filled whole stars
-                for (var i = ratings; i >= 1; i--)
-                    output.push('<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;');
-
-                // If there is a half a star, append it
-                if (i == .5) output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
-
-                // Fill the empty stars
-                for (let i = (5 - ratings); i >= 1; i--)
-                    output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
-
-                return output.join('');
-
-            }
+            
+            cafeObject.latitude = results[i].geometry.location.lat();
+            cafeObject.longitude = results[i].geometry.location.lng();
+            cafeObject.name = results[i].name;
+            cafeObject.rating = results[i].rating;
+            cafeObject.place = results[i].place_id;
+            cafeObjectArray.push(cafeObject)
         }
+        sortCafeObjectArray(cafeObjectArray); 
+        pushCafeInfoToHTML(cafeObjectArray)
     }
 }
 
+function pushCafeInfoToHTML(cafeObjectArray) {
+    var cardAction = $("#reviews");
+    for (i = 0; i < cafeObjectArray.length; i++) {
+        // displays names and ratings with link to get directions of "mom and pops" coffee shops
+        if (cafeObjectArray[i].name !== "Starbucks" && cafeObjectArray[i].name !== "Barnes & Noble" && cafeObjectArray[i].name !== "McDonald's" && cafeObjectArray[i].name !== "Yum Yum Donuts" && cafeObjectArray[i].name !== "Coffee Bean" && cafeObjectArray[i].name !== "Panera Bread" && cafeObjectArray[i].name !== "Yum Yum Donuts") {
+            cardAction.append("<h6><strong>" + cafeObjectArray[i].name + "</strong></h6>");
+            cardAction.append("<p id='stars'>" + cafeObjectArray[i].rating + "  " + getStars(cafeObjectArray[i].rating) + "</p>");
+            cardAction.append("<p><a target='_blank' href = https://www.google.com/maps/search/?api=1&query=" + cafeObjectArray[i].latitude + "," + cafeObjectArray[i].longitude + ">" + "Directions" + "</a></p>");
+            cardAction.append("<p><a target='_blank' href = https://search.google.com/local/reviews?placeid=" + cafeObjectArray[i].place + ">" + "Reviews" + "</a></p>");
+            cardAction.append("<hr>");
+        }; 
+    }
+}
+
+// Sorting the objects by ratings of highest to lowest
+function sortCafeObjectArray(cafeObjectArray) {
+    cafeObjectArray.sort((a, b) => (a.rating > b.rating) ? -1 : 1)
+    return cafeObjectArray
+}
+
+// document.getElementById("stars").innerHTML = getStars(ratings);
+function getStars(ratings) {
+
+    // Round to nearest half
+    ratings = Math.round(ratings * 2) / 2;
+    let output = [];
+
+    // Append all the filled whole stars
+    for (var i = ratings; i >= 1; i--)
+        output.push('<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+    // If there is a half a star, append it
+    if (i == .5) output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+    // Fill the empty stars
+    for (let i = (5 - ratings); i >= 1; i--)
+        output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+    return output.join('');
+
+}
 
 function createMarker(place, index) {
     var placeLoc = place.geometry.location;
