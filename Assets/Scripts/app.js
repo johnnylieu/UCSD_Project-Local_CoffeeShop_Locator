@@ -2,26 +2,6 @@
 // displays current date
 $(document).ready(function () {
 
-    // Makes sure the cards stack vertically
-    // let alterClass = function () {
-    //     let ww = document.body.clientWidth;
-    //     if (ww < 500) {
-    //         $('#map-review-container').removeClass('row');
-    //         $('#current-icon').hide(); //materialize helper
-    //         // $('#current-icon').css('display', 'none')
-    //     } else if (ww >= 401) {
-    //         $('#map-review-container').addClass('row');
-    //         $('#current-icon').show(); //materialize helper
-    //         // $('#current-icon').css('display', 'show')
-    //     };
-    // };
-    $(window).resize(function () {
-        alterClass();
-    });
-    //Render it when the page first loads:
-    alterClass();
-
-
     $("#current-date").append("<strong>Today's Date:</strong>  " + (moment().format('dddd, MMMM Do')));
 
     // fixes the enter button error where it reloads page
@@ -149,9 +129,9 @@ function initialize() {
     // The map, centered at location
     map = new google.maps.Map(
         document.getElementById('map'), {
-            zoom: 12,
-            center: userLoc
-        });
+        zoom: 12,
+        center: userLoc
+    });
 
     // The marker, positioned at user's location
     var marker = new google.maps.Marker({
@@ -191,7 +171,7 @@ function callback(results, status) {
             }
             createMarker(results[i], i);
             console.log(results[i], i);
-            
+
             cafeObject.latitude = results[i].geometry.location.lat();
             cafeObject.longitude = results[i].geometry.location.lng();
             cafeObject.name = results[i].name;
@@ -199,7 +179,7 @@ function callback(results, status) {
             cafeObject.place = results[i].place_id;
             cafeObjectArray.push(cafeObject)
         }
-        sortCafeObjectArray(cafeObjectArray); 
+        sortCafeObjectArray(cafeObjectArray);
         pushCafeInfoToHTML(cafeObjectArray)
     }
 }
@@ -214,7 +194,7 @@ function pushCafeInfoToHTML(cafeObjectArray) {
             cardAction.append("<p><a target='_blank' href = https://www.google.com/maps/search/?api=1&query=" + cafeObjectArray[i].latitude + "," + cafeObjectArray[i].longitude + ">" + "Directions" + "</a></p>");
             cardAction.append("<p><a target='_blank' href = https://search.google.com/local/reviews?placeid=" + cafeObjectArray[i].place + ">" + "Reviews" + "</a></p>");
             cardAction.append("<hr>");
-        }; 
+        };
     }
 }
 
