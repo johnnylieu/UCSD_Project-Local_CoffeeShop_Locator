@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAS2x02bx7VMiqvBnO4mHdYrY2s7N2FSw_KEY&callback=initMap"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAS2x02bx7VMiqvBnO4mHdYrY2s7N2FSw&libraries=places"></script>
-    <title>Local Coffee Shops</title>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAS2x02bx7VMiqvBnO4mHdYrY2s7N2FSw_KEY&callback=initMap"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAS2x02bx7VMiqvBnO4mHdYrY2s7N2FSw&libraries=places"></script>
+    <title>Local Coffee Shop Locator</title>
     <!-- CSS Style Sheet -->
     <link rel="stylesheet" href="./Assets/Styles/style.css">
 
@@ -21,8 +23,11 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Local Coffee Shop Locator</title>
+
+    <!-- Moment JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 </head>
 
 <body>
@@ -43,7 +48,8 @@
 
                             <!-- User's Input -->
                             <div class="input-field">
-                                <input type="text" class="form-control validate" id="city-name" aria-label="Search" placeholder="Type your city here i.e. San Diego">
+                                <input type="text" class="form-control validate" id="city-name" aria-label="Search"
+                                    placeholder="Type your city here i.e. San Diego">
                                 <label for="city-name"></label>
                                 <i class="waves-effect waves-light btn searchBtn" id="searchBtn"><span
                                         class="fa fa-search"></span></i>
@@ -105,7 +111,6 @@
 
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <script src="./Assets/Scripts/app.js"></script>
 
 </html>
