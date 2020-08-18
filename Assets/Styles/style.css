@@ -137,9 +137,13 @@ display: none;
   text-align: center;
 }
 
-#reviews-title {
-  padding-top: 5px;
+#reviews-title-container {
+  padding-top: 30px;
   padding-bottom: 0px;
+}
+
+#reviews-title {
+  font-size: 32px;
 }
 
 /* Google map styling*/
