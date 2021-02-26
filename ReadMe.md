@@ -29,7 +29,7 @@ This application is a work in progress, future updates will include:
 
 ## Feedback
 
-Share with us with any comments or questions to help us grow! Email matthew.shane.rogers@gmail.com.
+Share with us with any comments or questions to help us grow! Email JohnnyLieu@yahoo.com.
 
 ## Credits
 
