@@ -2,7 +2,7 @@
 
 This application will generate the locations of nearby coffee shops, relative to a city search, and the current weather conditions for the city. 
 
-Click this link to access the [Deployed Application](https://aaronkplatt.github.io/localCoffeeShops.github.io/)
+Click this link to access the [Deployed Application](https://johnnylieu.github.io/localCoffeeShops.github.io/)
 
 ## Screenshots
 
