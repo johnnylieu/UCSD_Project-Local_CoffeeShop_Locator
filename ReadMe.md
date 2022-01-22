@@ -4,6 +4,9 @@ This application will generate the locations of nearby coffee shops, relative to
 
 Click this link to access the [Deployed Application](https://johnnylieu.github.io/localCoffeeShops.github.io/)
 
+## Video Demo
+<https://www.youtube.com/watch?v=26inkG9k5jE>
+
 ## Screenshots
 
 Here is an example of our site in action:
