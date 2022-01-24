@@ -1,6 +1,6 @@
 # Local-Coffee-Shop-Locator
 
-This application will generate the locations of nearby coffee shops, relative to a city search, and the current weather conditions for the city. 
+This application will generate the locations of nearby coffee shops, relative to a city search (or app can grab your location), and the current weather conditions for the city. 
 
 Click this link to access the [Deployed Application](https://johnnylieu.github.io/localCoffeeShops.github.io/)
 
